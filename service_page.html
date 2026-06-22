@@ -1,0 +1,2449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Advanced bladeless, customized LASIK eye surgery in Delhi NCR — Freedom from glasses with world-class robotic laser technology at Khanna Eye Centre since 1951.">
+  <title>LASIK Surgery in Delhi NCR | Khanna Eye Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ============================================================
+       Khanna Eye Centre — LASIK Surgery Service Page
+       Modern, Mobile-First Design System
+       ============================================================ */
+
+    :root {
+      
+
+  /* Same colors as index page */
+
+  --primary: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #e8f5e9;
+  --secondary: #2e7d32;
+
+  /* Gold accent */
+  --accent: #4caf50;
+
+  --neutral-900: #17344d;
+  --neutral-700: #0d1b2a;
+  --neutral-600: #555;
+  --neutral-500: #777;
+  --neutral-300: #e0e0e0;
+  --neutral-100: #eef3f7;
+
+  --surface: #ffffff;
+
+      
+      --spacing-xs: 8px;
+      --spacing-sm: 14px;
+      --spacing-md: 22px;
+      --spacing-lg: 32px;
+      --spacing-xl: 48px;
+      --spacing-2xl: 64px;
+      --spacing-3xl: 84px;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      
+      --shadow-sm: 0 1px 2px rgba(20, 60, 80, 0.07);
+      --shadow-md: 0 8px 26px rgba(20, 60, 80, 0.10);
+      --shadow-lg: 0 24px 60px rgba(20, 60, 80, 0.18);
+      
+      --font-sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+      --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+      
+      --max-width: 1180px;
+      --transition: 0.18s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--surface);
+      color: var(--neutral-600);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--neutral-900);
+      letter-spacing: -0.02em;
+      font-weight: 700;
+      line-height: 1.12;
+    }
+
+    h1 { font-size: clamp(32px, 7vw, 54px); }
+    h2 { font-size: clamp(28px, 5vw, 38px); }
+    h3 { font-size: clamp(22px, 4vw, 26px); }
+    h4 { font-size: clamp(18px, 3vw, 21px); }
+
+    p { margin: 0; }
+    a { color: var(--primary-dark); text-decoration: none; transition: var(--transition); }
+    a:hover { color: var(--primary); }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Layout */
+   .container{
+  max-width:1380px;
+  width:100%;
+  margin:0 auto;
+  padding:0 48px;
+}
+
+    .section {
+      padding: var(--spacing-3xl) 0;
+    }
+
+    .section.tint {
+      background: var(--neutral-100);
+    }
+
+    .section.brand {
+      background: linear-gradient(155deg, var(--neutral-700), var(--neutral-900));
+      color: #fff;
+    }
+
+    /* Utility Classes */
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 26px;
+      height: 2px;
+      background: var(--primary);
+    }
+
+    .lead {
+      font-size: clamp(17px, 2vw, 18.5px);
+      color: var(--neutral-600);
+      max-width: 62ch;
+      margin-top: var(--spacing-md);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .eyebrow {
+      justify-content: center;
+    }
+
+    .text-center .lead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Badges & Pills */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--neutral-100);
+      border: 1px solid #CFE4ED;
+      padding: var(--spacing-sm) 15px;
+      border-radius: 999px;
+    }
+
+    .pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    .tag.primary {
+      color: var(--primary-dark);
+      background: var(--neutral-100);
+    }
+
+    .tag.accent {
+      color: #8A5E12;
+      background: #FBF0D8;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-sm);
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 14px 26px;
+      border-radius: 11px;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn.primary{
+  background:#2e7d32;
+  border:2px solid #2e7d32;
+  color:#fff;
+  box-shadow:none;
+}
+
+.btn.primary:hover{
+  background:#1b5e20;
+  border-color:#1b5e20;
+}
+
+.btn.ghost{
+  background:transparent;
+  color:#2e7d32;
+  border:2px solid #2e7d32;
+}
+
+.btn.ghost:hover{
+  background:#2e7d32;
+  color:#fff;
+}
+
+    .btn.lg {
+      padding: 16px 32px;
+      font-size: 17px;
+    }
+
+    /* ===== UTILITY NAV ===== */
+    .util {
+      background: #F4F6F8;
+      color: #556068;
+      font-size: 13px;
+      border-bottom: 1px solid var(--neutral-300);
+    }
+
+    .util .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      height: auto;
+      padding: 12px var(--spacing-lg);
+    }
+
+    .util a {
+      color: var(--neutral-900);
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .header .container{
+    max-width:1380px;
+    width:100%;
+    padding:0 48px !important;
+}
+
+.header-inner{
+    display:flex;
+    align-items:center;
+    gap:80px;
+    padding-top:14px;
+    padding-bottom:14px;
+}
+
+.logo{
+    flex-shrink:0;
+}
+
+.logo-img-wrap{
+    height:52px;
+    display:flex;
+    align-items:center;
+}
+
+.logo-img-wrap img{
+    height:100%;
+    width:auto;
+}
+
+    /* ===== NAVBAR ===== */
+       .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: saturate(150%) blur(10px);
+      border-bottom: 1px solid var(--neutral-300);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-lg);
+      height: 74px;
+      padding: 0 var(--spacing-lg);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 46px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo-img {
+      height: 50px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text b {
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--neutral-900);
+      letter-spacing: 0.01em;
+      line-height: 1.05;
+      display: block;
+    }
+
+    .logo-text small {
+      font-family: var(--font-mono);
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: var(--spacing-lg);
+      margin-left: var(--spacing-md);
+      flex: 1;
+    }
+
+    .nav-menu a {
+      color: var(--neutral-900);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary-dark);
+    }
+
+    .nav-spacer {
+      flex: 1;
+    }
+
+    /* ===== BREADCRUMB ===== */
+    .breadcrumb {
+      background: var(--neutral-100);
+      border-bottom: 1px solid var(--neutral-300);
+      font-size: 13px;
+      color: var(--neutral-500);
+      font-family: var(--font-mono);
+    }
+
+    .breadcrumb .container {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      height: 46px;
+      padding: 0 var(--spacing-lg);
+    }
+
+    .breadcrumb a {
+      color: var(--neutral-500);
+    }
+
+    .breadcrumb .current {
+      color: var(--primary);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      background: #eef3f7;
+       padding: 64px 0 0;
+}
+     
+    
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: var(--spacing-2xl);
+      align-items: center;
+    }
+
+    .hero h1 {
+      line-height: 1.05;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--primary);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin: var(--spacing-md) 0 var(--spacing-lg);
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: var(--spacing-md);
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(20, 60, 80, 0.05), rgba(47, 125, 10, 0.05));
+      border: 1px solid var(--neutral-300);
+    }
+
+    .stat-card {
+      position: absolute;
+      left: -26px;
+      bottom: 26px;
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+
+    .stat-card .number {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .stat-card .label {
+      font-size: 12.5px;
+      color: var(--neutral-500);
+      line-height: 1.3;
+    }
+
+    /* Quick Stats Bar */
+    .quickbar {
+      background: var(--primary);
+      color: #fff;
+      margin-top: var(--spacing-2xl);
+    }
+
+    .quickbar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0;
+    }
+
+    .stat {
+      padding: var(--spacing-lg);
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: center;
+      border-right: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .stat:last-child {
+      border-right: 0;
+    }
+
+    .stat-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: rgba(255, 255, 255, 0.14);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .stat-content b {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .stat-content span {
+      font-size: 13px;
+      color: #D7ECD0;
+    }
+
+    /* ===== TWO COLUMN LAYOUT ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-2xl);
+      align-items: center;
+    }
+
+    .two-col.wide-left {
+      grid-template-columns: 1.15fr 0.85fr;
+    }
+
+    /* ===== FEATURES/CHECKS ===== */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .feature-card {
+      display: flex;
+      gap: var(--spacing-md);
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .feature-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: var(--neutral-100);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .feature-card b {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      color: var(--neutral-900);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: var(--neutral-500);
+    }
+
+    /* ===== TECHNIQUE CARDS ===== */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .tech-card {
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .tech-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .tech-card.featured {
+      border-color: var(--primary);
+      box-shadow: 0 14px 36px rgba(47, 125, 10, 0.18);
+    }
+
+    .tech-card .header {
+      padding: var(--spacing-md);
+      padding-bottom: 0;
+    }
+
+    .tech-card .image{
+    height:180px;
+    overflow:hidden;
+    border-radius:10px;
+    margin:var(--spacing-md);
+    border:1px solid var(--neutral-300);
+}
+
+.tech-card .image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+    .tech-card h3 {
+      font-size: 21px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .tech-card .body {
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      flex: 1;
+    }
+
+    .tech-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    .tech-card li {
+      display: flex;
+      gap: var(--spacing-sm);
+      font-size: 14px;
+      color: var(--neutral-600);
+    }
+
+    .tech-card li::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .tech-price {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--primary);
+      font-size: 15px;
+      margin-top: auto;
+    }
+
+    /* ===== TIMELINE/STEPS ===== */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+      counter-reset: step-counter;
+    }
+
+    .step {
+      position: relative;
+      padding-top: 54px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step::before {
+      counter-increment: step-counter;
+      content: counter(step-counter);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      font-size: 18px;
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 48px;
+      right: -10px;
+      height: 2px;
+      background: var(--neutral-300);
+    }
+
+    .step:last-child::after {
+      display: none;
+    }
+
+    .step h4 {
+      font-size: 16px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .step .time {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--primary-dark);
+      letter-spacing: 0.05em;
+      margin-bottom: var(--spacing-sm);
+      display: block;
+    }
+
+    .step p {
+      font-size: 14px;
+      color: var(--neutral-500);
+    }
+
+    /* ===== TABLE ===== */
+    .table-wrapper {
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: #fff;
+      margin-top: var(--spacing-md);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    table th,
+    table td {
+      text-align: left;
+      padding: 15px 18px;
+      border-bottom: 1px solid var(--neutral-300);
+      vertical-align: top;
+    }
+
+    table thead th {
+      background: var(--primary);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+    }
+
+    table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+
+    table tbody tr:nth-child(even) {
+      background: var(--neutral-100);
+    }
+
+    table td b {
+      font-family: var(--font-heading);
+      color: var(--neutral-900);
+    }
+
+    /* ===== WHY CARDS ===== */
+    .section.brand h2{
+    color: #ffffff !important;
+}
+
+.section.brand .lead{
+    color: #ffffff !important;
+}
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .why-card {
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      transition: var(--transition);
+    }
+
+    .why-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .section.brand .why-card {
+      background: rgba(135, 133, 133, 0.07);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .why-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 13px;
+      background: var(--neutral-100);
+      color: var(--primary);
+      display: grid;
+      place-items: center;
+      margin-bottom: var(--spacing-md);
+      font-size: 22px;
+    }
+
+    .section.brand .why-icon {
+      background: rgba(181, 171, 171, 0);
+      color: #fff;
+    }
+
+    .why-card h4 {
+      font-size: 19px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .section.brand .why-card h4 {
+      color: #fff;
+    }
+
+    .why-card p {
+      font-size: 14.5px;
+      color: var(--neutral-500);
+    }
+
+    .section.brand .why-card p {
+      color: #CFE2EC;
+    }
+
+    /* ===== RECOVERY TIMELINE ===== */
+    .recovery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .recovery-item {
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      border-top: 3px solid var(--primary);
+    }
+
+    .recovery-item .time {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--primary-dark);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .recovery-item b {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      color: var(--neutral-900);
+      margin: var(--spacing-sm) 0 var(--spacing-sm);
+    }
+
+    .recovery-item p {
+      font-size: 14px;
+      color: var(--neutral-500);
+    }
+
+    /* ===== DOCTORS ===== */
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .doctor-card{
+    background:#fff;
+    border:1px solid var(--neutral-300);
+    border-radius:16px;
+    overflow:hidden;
+    padding:28px;
+    text-align:center;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    height:100%;
+}
+
+    .doctor-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .doctor-image {
+      width: 100%;
+      aspect-ratio: 1 / 1.2;
+      background: linear-gradient(135deg, rgba(20, 60, 80, 0.05), rgba(47, 125, 10, 0.05));
+      border-bottom: 1px solid var(--neutral-300);
+      display: grid;
+      place-items: center;
+    }
+
+    .doctor-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .doctor-info {
+      padding: 18px;
+    }
+
+    .doctor-info h4 {
+      font-size: 18px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .doctor-role {
+      font-size: 13px;
+      color: var(--primary-dark);
+      font-weight: 600;
+      margin: 4px 0 var(--spacing-sm);
+    }
+
+    .doctor-info p {
+      font-size: 13.5px;
+      color: var(--neutral-500);
+    }
+
+    /* ===== REVIEWS/TESTIMONIALS ===== */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .review-card:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .review-stars {
+      color: var(--accent);
+      letter-spacing: 2px;
+      font-size: 15px;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .review-text {
+      font-size: 15px;
+      color: var(--neutral-600);
+      margin-bottom: var(--spacing-md);
+      font-style: italic;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--neutral-100);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .author-info b {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      color: var(--neutral-900);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .author-info span {
+      font-size: 12.5px;
+      color: var(--neutral-500);
+    }
+
+    /* ===== FAQ ===== */
+    .faq-container {
+      max-width: 860px;
+      margin: var(--spacing-md) auto 0;
+    }
+
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--neutral-300);
+      border-radius: 12px;
+      margin-bottom: var(--spacing-sm);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      list-style: none;
+      padding: 20px 22px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--neutral-900);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--spacing-md);
+      transition: var(--transition);
+    }
+
+    .faq-question:hover {
+      background: var(--neutral-100);
+    }
+
+    .faq-question::after {
+      content: '+';
+      font-size: 24px;
+      color: var(--primary);
+      font-weight: 400;
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .faq-item[open] .faq-question::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 22px 20px;
+      font-size: 15px;
+      color: var(--neutral-600);
+      line-height: 1.7;
+    }
+
+    /* ===== CTA FORM BAND ===== */
+    .cta-band {
+      background: linear-gradient(155deg, var(--neutral-700), var(--neutral-900));
+      color: #fff;
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-2xl);
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: var(--spacing-2xl);
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+      margin-top: var(--spacing-2xl);
+    }
+
+    .cta-band h2 {
+      color: #fff;
+      font-size: clamp(28px, 4vw, 34px);
+    }
+
+    .cta-band p {
+      color: #CFE2EC;
+      margin-top: var(--spacing-md);
+      font-size: 17px;
+    }
+
+    .cta-points {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+
+    .cta-point {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      font-size: 15px;
+      color: #EAF4F8;
+    }
+
+    .cta-point .check {
+      width: 24px;
+      height: 24px;
+      border-radius: 7px;
+      background: rgba(255, 255, 255, 0.16);
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      background: #fff;
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-form h4 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .form-note {
+      font-size: 13px;
+      color: var(--neutral-500);
+      margin-bottom: 18px;
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--neutral-900);
+      margin-bottom: 6px;
+    }
+
+    .form-input,
+    .form-select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid var(--neutral-300);
+      border-radius: 10px;
+      font-family: var(--font-sans);
+      font-size: 15px;
+      color: var(--neutral-900);
+      background: #fff;
+      transition: var(--transition);
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+      outline: 0;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(47, 125, 10, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-sm);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer { background: #0d1b2a; padding: 64px 0 0; }
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+  padding-bottom: 48px;
+}
+.footer-brand p { 
+  color: rgba(255,255,255,0.6); 
+  font-size: 0.88rem; 
+  line-height: 1.75; 
+  margin: 16px 0 24px; 
+  max-width: 320px; 
+}
+.footer-logo { height: 48px; width: auto; color: #ccc; }
+.social-links { display: flex; gap: 10px; }
+.social-links a {
+  width: 36px;
+  height: 36px;
+  background: rgba(240, 237, 237, 0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.9rem;
+  transition: all var(--transition);
+}
+.social-links a:hover { background: var(--green); color: #fff; }
+.footer h4 { 
+  color: #fff; 
+  font-family: var(--font-body); 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  margin-bottom: 16px; 
+}
+.footer-links ul,
+.footer-searches ul { display: flex; flex-direction: column; gap: 8px; }
+.footer-links a,
+.footer-searches a { 
+  color: rgba(255,255,255,0.58); 
+  font-size: 0.88rem; 
+  transition: color var(--transition); 
+}
+.footer-links a:hover,
+.footer-searches a:hover { color: #90caf9; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 18px 0;
+  text-align: center;
+}
+.footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+.footer-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-bottom-links a {
+  color: rgba(255,255,255,0.5);
+  font-size: 0.82rem;
+  transition: color 0.3s ease;
+}
+.footer-bottom-links a:hover {
+  color: #fff;
+}
+.footer-bottom-links span {
+  color: rgba(255,255,255,0.25);
+  font-size: 0.82rem;
+}
+
+    /* ===== MOBILE RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      :root {
+        --spacing-lg: 24px;
+        --spacing-2xl: 48px;
+        --spacing-3xl: 48px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .navbar .container {
+        height: auto;
+        padding: 12px 16px;
+        gap: 12px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .hero-grid,
+      .two-col,
+      .two-col.wide-left,
+      .cta-band {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+      }
+
+      .quickbar-grid,
+      .tech-grid,
+      .feature-grid,
+      .why-grid,
+      .recovery-grid,
+      .doctors-grid,
+      .reviews-grid,
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      h1 { font-size: 32px; }
+      h2 { font-size: 26px; }
+      h3 { font-size: 20px; }
+
+      .hero-image {
+        min-height: 300px;
+      }
+
+      .stat-card {
+        position: static;
+        width: 100%;
+      }
+
+      .step::after {
+        right: calc(100% + var(--spacing-md));
+        left: auto;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      table th,
+      table td {
+        padding: 12px 14px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-band {
+        padding: var(--spacing-lg);
+      }
+
+      .contact-form {
+        padding: var(--spacing-lg);
+      }
+
+      .util .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-cta .btn {
+        width: 100%;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        flex-direction: column;
+        text-align: center;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .step::before {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+      }
+
+      .step {
+        padding-top: 44px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --spacing-md: 16px;
+        --spacing-lg: 20px;
+      }
+
+      body {
+        font-size: 15px;
+      }
+
+      h1 { font-size: 26px; }
+      h2 { font-size: 22px; }
+      h3 { font-size: 18px; }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .section {
+        padding: var(--spacing-2xl) 0;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+      }
+
+      .pill {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+
+      .btn.lg {
+        padding: 14px 24px;
+        font-size: 16px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        padding: 14px 14px;
+      }
+
+      .tech-card .image {
+        height: 120px;
+      }
+
+      table {
+        font-size: 12px;
+      }
+
+      table th,
+      table td {
+        padding: 10px 12px;
+      }
+
+      .faq-question {
+        font-size: 15px;
+        padding: 16px 18px;
+      }
+
+      .faq-answer {
+        padding: 0 18px 16px;
+        font-size: 14px;
+      }
+
+      .contact-form {
+        padding: 20px;
+      }
+
+      .recovery-item,
+      .why-card,
+      .why-icon {
+        padding: 16px;
+      }
+
+      .cta-band {
+        padding: 20px;
+      }
+
+      .cta-band h2 {
+        font-size: 24px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      .navbar,
+      .util,
+      .breadcrumb {
+        position: static;
+        display: none;
+      }
+
+      .section {
+        padding: 30px 0;
+        page-break-inside: avoid;
+      }
+
+      body {
+        font-size: 12px;
+      }
+
+      .faq-item {
+        page-break-inside: avoid;
+      }
+    }
+    /* EXACT SAME HEADER AS INDEX */
+
+.header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.header .container{
+    max-width:1380px;
+    width:100%;
+    margin:auto;
+    padding:0 48px;
+}
+
+.header-inner{
+    display:flex;
+    align-items:center;
+    gap:80px;
+
+    /* THIS CONTROLS HEADER HEIGHT */
+    padding-top:14px;
+    padding-bottom:14px;
+}
+
+.logo-img-wrap{
+    height:52px;
+    display:flex;
+    align-items:center;
+}
+
+.logo-img-wrap img{
+    height:100%;
+    width:auto;
+}
+/* MOBILE HEADER FIX */
+
+@media (max-width:768px){
+
+  .header .container{
+      padding:0 16px !important;
+  }
+
+  .header-inner{
+      gap:12px !important;
+      justify-content:space-between;
+  }
+
+  .header-cta{
+      display:none;   /* Hide desktop button on mobile */
+  }
+
+  .logo-img-wrap{
+      height:42px;
+  }
+
+  .hamburger{
+      display:flex !important;
+      margin-left:auto;
+  }
+
+}
+
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>
+    <i class="far fa-clock"></i>
+    Mon - Sun &nbsp; 8:00 AM - 8:00 PM
+  </span>
+
+  <div class="topbar-right">
+    <a href="tel:9354409885">
+      <i class="fas fa-phone"></i>
+      9354 409 885
+    </a>
+  </div>
+</div>
+
+
+
+<!-- HEADER -->
+<header class="header" id="header">
+
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <div class="logo-img-wrap">
+        <img src="assets/img/logo.jpg"
+             alt="Khanna Eye Centre Logo">
+      </div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+
+      <ul>
+
+        <li class="has-dropdown">
+
+          <a href="treatments.html">
+            Eye Treatments
+            <i class="fas fa-chevron-down"></i>
+          </a>
+
+          <ul class="dropdown">
+
+            <li>
+              <a href="lasik.html">
+                LASIK Surgery
+              </a>
+            </li>
+
+            <li>
+              <a href="icl.html">
+                ICL Surgery
+              </a>
+            </li>
+
+            <li>
+              <a href="cataract.html">
+                Cataract Surgery
+              </a>
+            </li>
+
+            <li>
+              <a href="retina.html">
+                Retina Treatment
+              </a>
+            </li>
+
+            <li>
+              <a href="cornea.html">
+                Cornea Services
+              </a>
+            </li>
+
+            <li>
+              <a href="glaucoma.html">
+                Glaucoma
+              </a>
+            </li>
+
+            <li>
+              <a href="treatments.html">
+                View All Treatments
+              </a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li>
+          <a href="doctors.html">
+            Our Doctors
+          </a>
+        </li>
+
+        <li>
+          <a href="about.html">
+            About Us
+          </a>
+        </li>
+
+        <li>
+          <a href="contact.html">
+            Contact Us
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <!-- Appointment Button -->
+    <a href="#contact"
+       class="btn btn-primary header-cta">
+      Book Appointment
+    </a>
+
+    <!-- Mobile Hamburger -->
+    <button class="hamburger"
+            id="hamburger"
+            aria-label="Menu">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </div>
+
+</header>
+
+<!-- ===== BREADCRUMB ===== -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="#home">Home</a> ›
+    <a href="#services">Eye Treatments</a> ›
+    <span class="current">LASIK Surgery</span>
+  </div>
+</div>
+
+<!-- ===== HERO SECTION ===== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">LASIK Surgery</span>
+        <h1>Bring back <em>crystal-clear vision</em> with advanced LASIK</h1>
+        <p class="lead">Advanced bladeless, customized LASIK surgery in Delhi NCR <!DOCTYPE html>
+        <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+        <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+        <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+        <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+        <html>
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>
+            
+            </title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="">
+          </head>
+          <body>
+            <!--[if lt IE 7]>
+              <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+            
+            <script src="" async defer></script>
+            <script src="main.js"></script>
+          </body>
+        </html> Freedom from glasses and contact lenses with world-class robotic laser technology at Khanna Eye Centre.</p>
+        
+        <div class="hero-badges">
+          <span class="pill"><span class="dot"></span>Safest Technology</span>
+          <span class="pill"><span class="dot"></span>Correcting vision since 1995</span>
+          <span class="pill"><span class="dot"></span>1.5 Lakh+ Surgeries</span>
+          <span class="pill"><span class="dot"></span>NABH Accredited</span>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn primary lg" href="#contact">Book a LASIK Evaluation</a>
+          <a class="btn ghost lg" href="#techniques">Explore Techniques →</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="assets/img/blog_1.jpg" alt="LASIK Surgery Procedure">
+        <div class="stat-card">
+          <span class="number">15<small style="font-size: 13px;">min</small></span>
+          <span class="label">Painless<br>laser procedure</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="quickbar">
+      <div class="container">
+        <div class="quickbar-grid">
+          <div class="stat">
+            <span class="stat-icon">⚡</span>
+            <div class="stat-content">
+              <b>15 min</b>
+              <span>Per-eye procedure</span>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">✓</span>
+            <div class="stat-content">
+              <b>Blade-Free</b>
+              <span>100% laser precision</span>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">🏥</span>
+            <div class="stat-content">
+              <b>Same Day</b>
+              <span>Quick return to routine</span>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="stat-icon">👁</span>
+            <div class="stat-content">
+              <b>99% Success</b>
+              <span>Proven & trusted</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT IS LASIK ===== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="two-col wide-left">
+      <div>
+        <span class="eyebrow">Understanding LASIK</span>
+        <h2>What is LASIK?</h2>
+        <p class="lead">LASIK is the short form for Laser-Assisted In-Situ Keratomileusis. It is a modern vision correction procedure that reshapes the cornea using laser technology so that light entering the eye focuses correctly on the retina.</p>
+        
+        <p style="margin-top: 20px; color: var(--neutral-600);">Modern LASIK is safe, quick, and allows most patients to return home shortly after the treatment. It can permanently correct myopia (nearsightedness), hyperopia (farsightedness), and astigmatism.</p>
+
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+          <span class="tag primary">Painless</span>
+          <span class="tag primary">No injections</span>
+          <span class="tag primary">Fast recovery</span>
+          <span class="tag accent">FDA Approved</span>
+        </div>
+      </div>
+      <img src="assets/img/blog_2.jpg" alt="LASIK Eye Diagram" style="border-radius: var(--radius-lg); border: 1px solid var(--neutral-300);">
+    </div>
+
+    <!-- Vision Problems -->
+    <div style="margin-top: 64px;">
+      <h3>Common vision problems LASIK can resolve</h3>
+      <p style="color: var(--neutral-500); margin-bottom: 20px;">If you notice any of these issues, then LASIK might be the solution for you.</p>
+      
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Myopia (Nearsightedness)</b>
+            <p>Difficulty seeing distant objects clearly</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Hyperopia (Farsightedness)</b>
+            <p>Difficulty focusing on nearby objects</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Astigmatism</b>
+            <p>Blurred or distorted vision due to irregular corneal shape</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Frequent Glasses Dependence</b>
+            <p>Relying on glasses for routine activities</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Contact Lens Discomfort</b>
+            <p>Dryness, irritation, or inconvenience with lenses</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">✓</span>
+          <div>
+            <b>Changing Prescription</b>
+            <p>Repeated changes in spectacle numbers</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECHNIQUES ===== -->
+<section class="section tint" id="techniques">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Advanced Techniques</span>
+      <h2>LASIK techniques under one roof</h2>
+      <p class="lead">From customized high-definition laser correction to blade-free robotic technology - we recommend what is genuinely best for your eyes after a detailed evaluation.</p>
+    </div>
+
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="header">
+          <span class="tag primary">Proven</span>
+          <h3>FEMTO LASIK</h3>
+        </div>
+        <div class="image">
+        <img src="assets/img/lasik_1.jpg"
+             alt="Femto LASIK">
+    </div>
+        <div class="body">
+          <ul>
+            <li>Fully blade-free laser technology</li>
+            <li>Femtosecond laser creates precise flap</li>
+            <li>Enhanced safety and accuracy</li>
+            <li>Faster visual recovery</li>
+            <li>Tissue-saving approach</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tech-card featured">
+        <div class="header">
+          <span class="tag accent">Most Popular</span>
+          <h3>I-LASIK (iLASIK)</h3>
+        </div>
+        <div class="image">
+        <img src="assets/img/lasik_2.jpg"
+             alt="Femto LASIK">
+    </div>
+        <div class="body">
+          <ul>
+            <li>Advanced customized vision correction</li>
+            <li>Detailed wavefront mapping of eye</li>
+            <li>Analyzes thousands of unique points</li>
+            <li>Highly personalized treatment</li>
+            <li>Sharper vision in low-light conditions</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tech-card">
+        <div class="header">
+          <span class="tag primary">Advanced</span>
+          <h3>INTRALASE</h3>
+        </div>
+       <div class="image">
+        <img src="assets/img/lasik_3.jpg"
+             alt="Femto LASIK">
+    </div>
+        <div class="body">
+          <ul>
+            <li>Advanced femtosecond laser technology</li>
+            <li>Precise flap without blade</li>
+            <li>Exceptional accuracy & safety</li>
+            <li>High-performance results</li>
+            <li>Improved predictability</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCEDURE STEPS ===== -->
+<section class="section" id="process">
+  <div class="container">
+    <span class="eyebrow">How it works</span>
+    <h2>Your LASIK journey - step by step</h2>
+    <p class="lead">A comfortable and guided process designed for safety and convenience.</p>
+
+    <div class="steps-grid">
+      <div class="step">
+        <span class="time">Day 0 · 30 min</span>
+        <h4>Detailed Eye Evaluation</h4>
+        <p>Comprehensive eye testing including corneal scans and measurements.</p>
+      </div>
+      <div class="step">
+        <span class="time">Pre-op</span>
+        <h4>Personalized Treatment Planning</h4>
+        <p>Selecting the most appropriate procedure for your eyes.</p>
+      </div>
+      <div class="step">
+        <span class="time">Surgery · 15 min</span>
+        <h4>Laser Procedure</h4>
+        <p>Quick, bladeless laser treatment usually completed within minutes.</p>
+      </div>
+      <div class="step">
+        <span class="time">Same day</span>
+        <h4>Recovery & Follow-Up</h4>
+        <p>Most patients return home the same day with scheduled follow-up care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCEDURE SELECTION TABLE ===== -->
+<section class="section tint">
+  <div class="container">
+    <span class="eyebrow">Choosing your procedure</span>
+    <h2>Which procedure to choose?</h2>
+    <p class="lead">The most suitable vision correction procedure depends on your spectacle power, corneal measurements, and detailed eye evaluation.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Spectacle Power Range</th>
+            <th>Recommended Procedure</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>-1 to -8 D</b></td>
+            <td>Advanced Laser Procedures (LASIK / FEMTO LASIK / Customized LASIK)</td>
+          </tr>
+          <tr>
+            <td><b>-8 to -20 D</b></td>
+            <td>Phakic IOL (ICL/IPCL)</td>
+          </tr>
+          <tr>
+            <td><b>+1 to +7 D</b></td>
+            <td>Hyperopic LASIK / Advanced Laser Procedures</td>
+          </tr>
+          <tr>
+            <td><b>+5 to +10 D</b></td>
+            <td>Phakic IOL (ICL/IPCL) or Refractive Lens Exchange (RLE)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size: 13px; color: var(--neutral-500); margin-top: 16px; font-family: var(--font-mono);">*Final procedure selection is determined after detailed clinical evaluation and eye diagnostic tests to ensure the safest and most effective outcome.</p>
+  </div>
+</section>
+
+<!-- ===== WHY KHANNA ===== -->
+<section class="section brand" id="why-khanna">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow" style="color: #9FD3E3;">Why Khanna Eye Centre</span>
+      <h2>Excellence in vision care since 1951</h2>
+      <p class="lead">38+ years of LASIK expertise with advanced robotic technology and personalized patient care.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">⚙️</div>
+        <h4>Advanced Robotic Technology</h4>
+        <p>We use the latest blade-free laser systems for precise, customized treatment.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⭐</div>
+        <h4>38+ Years of Experience</h4>
+        <p>Extensive expertise in laser vision correction with over 30 years of surgical excellence.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <h4>Pioneer in LASIK</h4>
+        <p>Among the early adopters of LASIK technology in North India with decades of experience.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔬</div>
+        <h4>Customized Treatment</h4>
+        <p>Every patient undergoes detailed diagnostic evaluation for personalized vision correction.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <h4>High Precision Eye Tracking</h4>
+        <p>Advanced eye-tracking system ensures accurate laser delivery during treatment.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏥</div>
+        <h4>Comprehensive Care</h4>
+        <p>Complete support from pre-LASIK assessment through surgery to post-procedure follow-up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RECOVERY ===== -->
+<section class="section" id="recovery">
+  <div class="container">
+    <span class="eyebrow">After Surgery</span>
+    <h2>What recovery looks like</h2>
+    <p class="lead">Most patients experience smooth and fast recovery with minimal discomfort.</p>
+
+    <div class="recovery-grid">
+      <div class="recovery-item">
+        <span class="time">Day 1</span>
+        <b>Vision Begins to Clear</b>
+        <p>Most patients see noticeably better the very next day.</p>
+      </div>
+      <div class="recovery-item">
+        <span class="time">Days 2–3</span>
+        <b>Back to Routine</b>
+        <p>Resume light daily activities with prescribed eye drops.</p>
+      </div>
+      <div class="recovery-item">
+        <span class="time">Week 1</span>
+        <b>Most Activities Resume</b>
+        <p>Return to work, reading and most normal activities safely.</p>
+      </div>
+      <div class="recovery-item">
+        <span class="time">Week 2–4</span>
+        <b>Fully Settled</b>
+        <p>Vision stabilizes; strenuous exercise and sports can resume.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOCTORS ===== -->
+<section class="section tint" id="doctors">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Meet Your Surgeons</span>
+      <h2>Our LASIK specialists</h2>
+      <p class="lead">A family legacy of ophthalmology, treating Delhi since 1951.</p>
+    </div>
+
+    <div class="doctors-grid">
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src="assets/img/dr1.jpg" alt="Dr. Rajinder Khanna">
+        </div>
+        <div class="doctor-info">
+          <h4>Dr. Rajinder Khanna</h4>
+          <div class="doctor-role">Chief Surgeon</div>
+          <p>35+ years' expertise; trains ophthalmologists across India.</p>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src="assets/img/dr2.jpg" alt="Dr. Aman Khanna">
+        </div>
+        <div class="doctor-info">
+          <h4>Dr. Aman Khanna</h4>
+          <div class="doctor-role">Phaco, Vitreo-Retina & Uvea</div>
+          <p>15+ years in advanced phaco & retinal care.</p>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src="assets/img/dr3.jpg" alt="Dr. Ankita Khanna">
+        </div>
+        <div class="doctor-info">
+          <h4>Dr. Ankita Khanna</h4>
+          <div class="doctor-role">MBBS, MS, FCRS</div>
+          <p>15+ years in cornea & specs-removal surgery.</p>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-image">
+          <img src="assets/img/dr4.jpg" alt="Dr. Deepak Aggarwal">
+        </div>
+        <div class="doctor-info">
+          <h4>Dr. Deepak Aggarwal</h4>
+          <div class="doctor-role">Vitreo-Retinal & Uvea</div>
+          <p>15+ years in advanced retina & micro-incision surgery.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Patient Stories</span>
+      <h2>Trusted by thousands of patients</h2>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I came here for LASIK surgery with very high power. Dr. Ankita Khanna performed the surgery and removed my high power number completely. Now I can see everything clearly without glasses. Thank you so much!"</p>
+        <div class="review-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <b>Saakib Khan</b>
+            <span>LASIK Surgery</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Best eyes hospital! All doctors are highly qualified and capable in their department. Dr. Ankita Khanna is very intelligent and a good doctor. I had very high scores but still got a very good result. Highly recommended!"</p>
+        <div class="review-author">
+          <div class="author-avatar">S</div>
+          <div class="author-info">
+            <b>Shruti Sagar</b>
+            <span>Nirman Vihar Branch</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Great experience from consultation to post-op care. The staff was very kind and helpful. They assisted me at every step and ensured a smooth process. I would definitely recommend this hospital!"</p>
+        <div class="review-author">
+          <div class="author-avatar">M</div>
+          <div class="author-info">
+            <b>Manish Chaturvedi</b>
+            <span>Laxmi Nagar Branch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="section tint" id="faq">
+  <div class="container">
+    <div class="text-center">
+      <span class="eyebrow">Questions Answered</span>
+      <h2>LASIK surgery FAQs</h2>
+    </div>
+
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary class="faq-question">Who is not suitable for LASIK eye surgery?</summary>
+        <div class="faq-answer">People with unstable spectacle power, very thin corneas, certain eye diseases, or specific medical conditions may not be suitable. A detailed eye evaluation determines eligibility.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Is LASIK painful?</summary>
+        <div class="faq-answer">LASIK is generally painless because anesthetic eye drops are used before the procedure. Some patients may experience mild discomfort or irritation for a short time afterward.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can LASIK correct all types of vision problems?</summary>
+        <div class="faq-answer">LASIK can correct myopia, hyperopia, and astigmatism in suitable candidates. Some patients with very high power may require other procedures like ICL/IPCL.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Are there any side effects of LASIK?</summary>
+        <div class="faq-answer">Temporary symptoms such as dryness, glare, halos, or light sensitivity may occur after surgery. These usually improve as the eyes heal within a few weeks.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can both eyes be treated together?</summary>
+        <div class="faq-answer">Yes, LASIK is commonly performed on both eyes during the same session. This allows faster visual recovery and greater convenience.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How much time does LASIK surgery take?</summary>
+        <div class="faq-answer">The laser procedure itself usually takes only a few minutes per eye. The complete visit, including preparation and observation, may take a few hours.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Is LASIK permanent?</summary>
+        <div class="faq-answer">LASIK permanently reshapes the cornea to correct vision. However, natural age-related changes in eyesight can still happen later in life.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">How soon can I drive after LASIK?</summary>
+        <div class="faq-answer">Many patients can resume driving within a few days once vision becomes clear enough. Your doctor will advise based on your recovery progress.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can I use eye makeup after surgery?</summary>
+        <div class="faq-answer">Eye makeup and cosmetics are usually avoided for a short period after surgery to reduce irritation and infection risk. Follow your doctor's specific instructions.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What is the worst possible complication?</summary>
+        <div class="faq-answer">Serious complications are rare, especially with modern technology and proper screening. Risks are discussed during evaluation, and safety measures are taken throughout treatment.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA FORM ===== -->
+<section class="section tint" id="contact">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Ready to see the world clearly?</h2>
+        <p>Schedule your LASIK consultation with our specialists at Khanna Eye Centre. We'll examine your eyes, explain your options honestly, and provide a clear treatment plan.</p>
+        
+        <div class="cta-points">
+          <div class="cta-point">
+            <span class="check">✓</span>
+            NABH-accredited, surgeon-led care since 1951
+          </div>
+          <div class="cta-point">
+            <span class="check">✓</span>
+            Advanced robotic technology for precision
+          </div>
+          <div class="cta-point">
+            <span class="check">✓</span>
+            Personalized treatment for your unique eyes
+          </div>
+          <div class="cta-point">
+            <span class="check">✓</span>
+            011-49147824 · +91 9354 409 885
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <h4>Request a consultation</h4>
+        <p class="form-note">We'll call you within working hours to confirm.</p>
+        
+        <div class="form-group">
+          <label class="form-label" for="name">Your name</label>
+          <input class="form-input" id="name" type="text" placeholder="Full name" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="phone">Mobile number</label>
+            <input class="form-input" id="phone" type="tel" placeholder="+91 9XXX XXXXXX" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="treatment">Treatment</label>
+            <select class="form-select" id="treatment" required>
+              <option>LASIK Surgery</option>
+              <option>Cataract Surgery</option>
+              <option>ICL/Phakic IOL</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="time">Preferred time</label>
+          <input class="form-input" id="time" type="text" placeholder="e.g. Tomorrow morning">
+        </div>
+
+        <button class="btn primary lg" style="width: 100%;">Book My Appointment</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <h2>Khanna Eye Centre</h2>
+        </div>
+        <p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="treatments.html">Eye Treatments</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-searches">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li>
+          <li><a href="treatments.html#cataract">Cataract</a></li>
+          <li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+          <li><a href="treatments.html#retina">Retina Treatment</a></li>
+          <li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+  <div class="container footer-bottom-inner">
+    <p>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</p>
+    <div class="footer-bottom-links">
+      <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+      <span>|</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <span>|</span>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+  </div>
+</div>
+  </footer>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+  // Form submission handler
+  function handleSubmit(event) {
+    event.preventDefault();
+    
+    const formData = {
+      name: document.getElementById('name').value,
+      phone: document.getElementById('phone').value,
+      treatment: document.getElementById('treatment').value,
+      time: document.getElementById('time').value
+    };
+
+    // Log or send to backend
+    console.log('Form submitted:', formData);
+    
+    // Show success message
+    alert('Thank you! We will call you shortly to confirm your appointment.');
+    event.target.reset();
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // Mobile menu toggle (if needed in future)
+  window.toggleMobileMenu = function() {
+    const navMenu = document.querySelector('.nav-menu');
+    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+  };
+</script>
+
+</body>
+</html>
