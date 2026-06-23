@@ -1582,6 +1582,7 @@ details[open] > .faq-question {
     flex-direction:column;
     opacity:1 !important;
     position:relative;
+    
 }
 
 .slide:not(:first-child){
@@ -1603,15 +1604,45 @@ details[open] > .faq-question {
 .slide-content{
     display:block;
     width:100%;
+    
 }
 
+/* MOBILE HERO LEFT ALIGN */
 .slide-text{
     width:100%;
     max-width:100%;
-    text-align:center;
+    text-align:left !important;
     padding:0 20px 20px;
     background:#fff;
 }
+
+.slide-tag{
+    display:inline-block;
+    margin-bottom:16px;
+}
+
+.slide-text h1{
+    text-align:left !important;
+    font-size:32px;
+    line-height:1.2;
+    margin-bottom:14px;
+}
+
+.slide-text p{
+    text-align:left !important;
+    margin:0 0 20px 0;
+    max-width:100%;
+}
+
+.slide-text .btn{
+    margin:0 !important;
+}
+
+.hero-trust{
+    justify-content:flex-start !important;
+}
+
+
 
 .slide-tag{
     display:inline-block;
