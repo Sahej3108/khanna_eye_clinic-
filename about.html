@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Khanna Eye Centre | Trusted Eye Care Since 1951</title>
+  <title>About Us - Khanna Eye Centre | Trusted Eye Care Since 1951</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
@@ -44,31 +44,57 @@
     .milestone-card p{ font-size:0.88rem; margin:0; }
 
     .legacy-grid{
-  display: grid;
-  grid-template-columns: 0.85fr 1fr;
-  gap: 56px;
-  align-items: center;
+  display:grid;
+  grid-template-columns:0.85fr 1fr;
+  gap:56px;
+  align-items:center;
 }
 
 .legacy-img{
-  aspect-ratio: 3 / 3.4;
-  width: 100%;
+  width:100%;
+  aspect-ratio:3/3.4;
 }
 
 .legacy-img-sm{
-  width: 520px;      /* 820 - 100 */
-  height: 616px;     /* 916 - 100 (maintains 3:3.4 ratio) */
-  margin: 0 auto;
-  object-fit: cover;
+  width:100%;
+  max-width:520px;
+  aspect-ratio:3/3.4;
+  height:auto;
+  margin:0 auto;
+  object-fit:cover;
 }
 
-@media (max-width: 900px){
+@media (max-width:768px){
+
+  .legacy-grid{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+
+  .legacy-content{
+    order:2;
+  }
+
+  .legacy-img{
+    order:1;
+  }
+
   .legacy-img-sm{
-    width: 620px;
-    height: 703px;
+    max-width:100%;
+    width:100%;
+    height:auto;
+  }
+
+  .legacy-content h2{
+    font-size:28px;
+    line-height:1.2;
+  }
+
+  .legacy-content p{
+    font-size:15px;
+    line-height:1.8;
   }
 }
-    .legacy-content > p{ margin-bottom: 16px; }
     .legacy-quote{
       border-left: 3px solid var(--green);
       padding-left: 18px;
@@ -203,7 +229,7 @@
 
     <nav class="nav" id="nav">
       <ul id="navMenu">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index%20.html">Home</a></li>
 
         <li class="has-dropdown">
           <a href="treatments.html" class="dropdown-toggle">
