@@ -12,6 +12,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+
   <style>
     /* ============================================================
        Khanna Eye Centre — ICL Surgery Service Page
@@ -1609,120 +1611,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
 
+
 <!-- HEADER -->
 <header class="header" id="header">
-
   <div class="container header-inner">
 
-    <!-- Logo -->
     <a href="index.html" class="logo">
       <div class="logo-img-wrap">
-        <img src="assets/img/logo.jpg"
-             alt="Khanna Eye Centre Logo">
+        <img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo">
       </div>
     </a>
 
-    <!-- Navigation -->
     <nav class="nav" id="nav">
-
-      <ul>
+      <ul id="navMenu">
+        <li><a href="index%20.html">Home</a></li>
 
         <li class="has-dropdown">
-
-          <a href="treatments.html">
-            Eye Treatments
-            <i class="fas fa-chevron-down"></i>
+          <a href="treatments.html" class="dropdown-toggle">
+            Eye Treatments <i class="fas fa-chevron-down"></i>
           </a>
 
           <ul class="dropdown">
-
-            <li>
-              <a href="lasik.html">
-                Lasik Surgery
-              </a>
-            </li>
-
-            <li>
-              <a href="icl.html">
-                ICL Surgery
-              </a>
-            </li>
-
-            <li>
-              <a href="cataract.html">
-                Cataract Surgery
-              </a>
-            </li>
-
-            <li>
-              <a href="retina.html">
-                Retina Treatment
-              </a>
-            </li>
-
-            <li>
-              <a href="cornea.html">
-                Cornea Services
-              </a>
-            </li>
-
-            <li>
-              <a href="glaucoma.html">
-                Glaucoma
-              </a>
-            </li>
-
-            <li>
-              <a href="treatments.html">
-                View All Treatments
-              </a>
-            </li>
-
+            <li><a href="lasik.html">LASIK Surgery</a></li>
+            <li><a href="icl.html">ICL Surgery</a></li>
+            <li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+            <li><a href="treatments.html#retina">Retina Treatment</a></li>
+            <li><a href="treatments.html#cornea">Cornea Services</a></li>
+            <li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+            <li><a href="treatments.html">View All Treatments</a></li>
           </ul>
-
         </li>
 
-        <li>
-          <a href="doctors.html">
-            Our Doctors
-          </a>
-        </li>
-
-        <li>
-          <a href="about.html">
-            About Us
-          </a>
-        </li>
-
-        <li>
-          <a href="contact.html">
-            Contact Us
-          </a>
-        </li>
-
+        <li><a href="doctors.html">Our Doctors</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
-
     </nav>
 
-    <!-- Appointment Button -->
-    <a href="#contact"
-       class="btn btn-primary header-cta">
+    <a href="#" class="btn btn-primary header-cta open-modal">
       Book Appointment
     </a>
 
-    <!-- Mobile Hamburger -->
-    <button class="hamburger"
-            id="hamburger"
-            aria-label="Menu">
-
+    <button class="hamburger" id="hamburger" aria-label="Open Menu">
       <span></span>
       <span></span>
       <span></span>
-
     </button>
 
   </div>
-
 </header>
 
 <!-- ===== BREADCRUMB ===== -->
@@ -2394,7 +2330,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       <div class="footer-links">
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index%20.html">Home</a></li>
 
           <li><a href="treatments.html">Eye Treatments</a></li>
           <li><a href="blogs.html">Blogs</a></li>
