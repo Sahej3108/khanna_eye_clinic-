@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Khanna Eye Centre | Trusted Eye Care Since 1951</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Page-specific additions — kept minimal and reusing existing design tokens */
+    .page-banner{
+      background: var(--bg-light);
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+    .page-banner .section-tag{ margin-bottom: 14px; }
+    .page-banner h1{ color:#17344d; margin-bottom: 14px; }
+    .page-banner p{ max-width: 640px; margin: 0 auto; }
+    .breadcrumb{ font-size:0.85rem; color: var(--text-light); margin-top: 14px; }
+    .breadcrumb a{ color: var(--green); font-weight:600; }
+
+    .milestones-grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      text-align:center;
+    }
+    .milestone-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 16px;
+      box-shadow: var(--shadow);
+      transition: all var(--transition);
+    }
+    .milestone-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .milestone-card h3{
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+    .milestone-card p{ font-size:0.88rem; margin:0; }
+
+    .legacy-grid{
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.legacy-img{
+  aspect-ratio: 3 / 3.4;
+  width: 100%;
+}
+
+.legacy-img-sm{
+  width: 520px;      /* 820 - 100 */
+  height: 616px;     /* 916 - 100 (maintains 3:3.4 ratio) */
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+@media (max-width: 900px){
+  .legacy-img-sm{
+    width: 620px;
+    height: 703px;
+  }
+}
+    .legacy-content > p{ margin-bottom: 16px; }
+    .legacy-quote{
+      border-left: 3px solid var(--green);
+      padding-left: 18px;
+      margin: 20px 0;
+      font-style: italic;
+      color: var(--text);
+    }
+
+    .expertise-list{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 32px;
+    }
+    .expertise-list li{
+      display:flex;
+      align-items:flex-start;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .expertise-list li i{
+      color: var(--green);
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .expertise-note{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-weight:600;
+      font-size:0.88rem;
+      padding: 10px 18px;
+      border-radius: 30px;
+      margin-top: 24px;
+    }
+
+    .mission-vision-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .mv-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+      box-shadow: var(--shadow);
+    }
+    .mv-card h3{
+      color: var(--green-dark);
+      margin-bottom: 18px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .mv-card ul{ display:flex; flex-direction:column; gap:12px; }
+    .mv-card ul li{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      font-size:0.92rem;
+      color: var(--text-muted);
+    }
+    .mv-card ul li i{ color: var(--green); margin-top:3px; }
+    .mv-guiding{
+      grid-column: 1 / -1;
+      background: var(--green);
+      color:#fff;
+      border-radius: var(--radius-lg);
+      padding: 28px 36px;
+      text-align:center;
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+    }
+
+    .about-cta-section{
+      background: #1a2e3a;
+      position: relative;
+      overflow: hidden;
+      text-align:center;
+      padding: 70px 0;
+    }
+    .about-cta-section::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background: rgba(15,30,45,0.72);
+      z-index:0;
+    }
+    .about-cta-section .container{ position:relative; z-index:1; }
+    .about-cta-section h2{ color:#fff; margin-bottom: 14px; }
+    .about-cta-section p{ color: rgba(255,255,255,0.75); max-width: 560px; margin: 0 auto 30px; }
+
+    @media (max-width: 900px){
+      .milestones-grid{ grid-template-columns: repeat(2,1fr); }
+      .legacy-grid{ grid-template-columns: 1fr; gap: 28px; }
+      .mission-vision-grid{ grid-template-columns: 1fr; }
+      .expertise-list{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px){
+      .milestones-grid{ grid-template-columns: repeat(2,1fr); gap:14px; }
+      .milestone-card{ padding: 20px 10px; }
+      .milestone-card h3{ font-size:1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span><i class="far fa-clock"></i> Mon - Sun &nbsp; 8:00 AM - 8:00 PM</span>
+    <div class="topbar-right">
+      <a href="tel:9354409885"><i class="fas fa-phone"></i> 9354 409 885</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-img-wrap">
+          <img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo" />
+        </div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul>
+            <li><a href="index%20.html">Home</a></li>
+
+          <li class="has-dropdown">
+            <a href="treatments.html">Eye Treatments <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+              <li><a href="lasik.html">LASIK Surgery</a></li>
+              <li><a href="icl.html">ICL Surgery</a></li>
+              <li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+              <li><a href="treatments.html#retina">Retina Treatment</a></li>
+              <li><a href="treatments.html#cornea">Cornea Services</a></li>
+              <li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+              <li><a href="treatments.html">View All Treatments</a></li>
+            </ul>
+          </li>
+          <li><a href="doctors.html">Our Doctors</a></li>
+          <li><a href="about.html" class="active">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="btn btn-primary header-cta open-modal">Book Appointment</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE BANNER -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="section-tag">About Khanna Eye Centre</span>
+      <h1>Over 70 Years of Dedicated Eye Care</h1>
+      <p>A legacy built on quality eye care, modern technology, affordability and compassionate treatment - serving patients across Delhi NCR since 1951.</p>
+      <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About Us</div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="about-section section">
+    <div class="container legacy-grid">
+      <div class="img-container legacy-img">
+        <img src="assets/img/clinic.avif" alt="Khanna Eye Centre Building" />
+      </div>
+      <div class="legacy-content">
+        <h2>Our Story</h2>
+        <p>Khanna Eye Centre traces its roots back to 1951, when Dr. B.N. Khanna began his mission to make quality eye care accessible to people across India.</p>
+        <p>A victim of Partition and a refugee himself, Dr. Khanna started with limited resources but a strong commitment to helping people affected by avoidable blindness. His vision was to work towards a cataract-free India and make eye care available to those who needed it most.</p>
+        <p>What began as a small practice gradually grew into a wider network of charitable eye care facilities across India and, eventually, two high-tech eye centres in Delhi.</p>
+        <p>Today, Khanna Eye Centre continues to follow the principles on which it was founded: quality eye care, modern technology, affordability and compassionate treatment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section class="stats-bar">
+    <div class="container milestones-grid">
+      <div class="milestone-card">
+        <h3>1951</h3>
+        <p>The journey of Khanna Eye Centre began</p>
+      </div>
+      <div class="milestone-card">
+        <h3>6.25 Lakh+</h3>
+        <p>Free eye surgeries conducted for underprivileged patients</p>
+      </div>
+      <div class="milestone-card">
+        <h3>70+ Years</h3>
+        <p>Of experience in eye care</p>
+      </div>
+      <div class="milestone-card">
+        <h3>2</h3>
+        <p>High-tech eye centres in Delhi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGACY OF SERVICE -->
+  <section class="about-section section">
+    <div class="container legacy-grid">
+      <div class="legacy-content">
+        <h2>A Legacy of Service</h2>
+        <p>Dr. B.N. Khanna dedicated much of his life to providing eye care to people from underserved communities. Over the course of his work, he conducted approximately 6.25 lakh free eye surgeries for underprivileged patients.</p>
+        <p>His contribution to eye care continued alongside the growth of his private practice and the development of modern ophthalmic facilities.</p>
+        <div class="legacy-quote">
+          Dr. B.N. Khanna passed away in 2015, leaving behind a legacy centred on service and accessible eye care. His vision continues to be an important part of Khanna Eye Centre's approach to patient care.
+        </div>
+      </div>
+      <div class="img-container legacy-img-sm">
+        <img src="assets/img/dr1.jpg" alt="Dr. B.N. Khanna Legacy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPREHENSIVE EYE CARE SERVICES -->
+  <section class="treatments-section section" style="background: var(--bg-light);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2>Our Comprehensive Eye Care Services</h2>
+      </div>
+      <div class="treatments-grid">
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/see_without_glass.jpg" alt="LASIK Eye Surgery" /></div>
+          <p class="treatment-name">LASIK Eye Surgery</p>
+          <p class="treatment-desc">We offer advanced LASIK procedures, including Blade-Free LASIK, Femto Second Intralase, Thin-Flap LASIK, High Definition LASIK and customized LASIK options for suitable patients.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/hero2.jpg" alt="ICL Surgery" /></div>
+          <p class="treatment-name">ICL Surgery</p>
+          <p class="treatment-desc">Implantable Collamer Lens (ICL) surgery is available for patients with high myopia or those who may not be suitable candidates for LASIK due to factors such as a thin cornea.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/cataract.jpg" alt="Cataract Surgery" /></div>
+          <p class="treatment-name">Cataract Surgery</p>
+          <p class="treatment-desc">We provide cataract evaluation and surgical care using modern diagnostic and surgical technologies to help restore clear vision.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/iol.jpg" alt="IOL" /></div>
+          <p class="treatment-name">IOL</p>
+          <p class="treatment-desc">Our lens care includes multifocal and toric intraocular lenses (IOLs). Optical Biometry is used for accurate IOL power calculation as part of cataract treatment planning.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/cornea.jpg" alt="Cornea Treatment" /></div>
+          <p class="treatment-name">Cornea Treatment</p>
+          <p class="treatment-desc">Our cornea services include assessment and treatment for conditions such as Keratoconus, with technologies and procedures including Pentacam HR-3, C3R and Intacs.</p>
+        </div>
+        <div class="treatment-card">
+          <div class="img-container treatment-img"><img src="assets/img/retina_treatment.jpg" alt="Retina Treatment" /></div>
+          <p class="treatment-name">Retina Treatment</p>
+          <p class="treatment-desc">Our retinal care includes advanced Vitreo-Retinal Surgery, Fluorescein Angiography, Green Laser photocoagulation, TTT Diode, and Anti-VEGF treatment for conditions such as ARMD.</p>
+        </div>
+      </div>
+      <div class="treatments-footer">
+        <a href="treatments.html" class="btn btn-outline">Explore Our Complete Services <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR EXPERTISE -->
+  <section class="about-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technology &amp; Expertise</span>
+        <h2>Our Expertise</h2>
+      </div>
+      <p style="text-align:center; max-width:720px; margin:0 auto 32px;">Khanna Eye Centre offers a range of specialised eye care procedures, diagnostic technologies and treatment facilities across different areas of ophthalmology.</p>
+      <ul class="expertise-list">
+        <li><i class="fas fa-check-circle"></i> Blade-Free LASIK (Femto Second Intralase)</li>
+        <li><i class="fas fa-check-circle"></i> Thin-Flap, 90-Micron Tissue-Saving Zed Profile LASIK</li>
+        <li><i class="fas fa-check-circle"></i> High Definition LASIK</li>
+        <li><i class="fas fa-check-circle"></i> Customised Aspheric LASIK / EPI-C LASIK</li>
+        <li><i class="fas fa-check-circle"></i> Computerised Field Charting</li>
+        <li><i class="fas fa-check-circle"></i> C3R &amp; Intacs for Keratoconus</li>
+        <li><i class="fas fa-check-circle"></i> Optical Biometry for IOL Power Calculation</li>
+        <li><i class="fas fa-check-circle"></i> Goldmann</li>
+        <li><i class="fas fa-check-circle"></i> ICL for High Myopia or Thin Cornea</li>
+        <li><i class="fas fa-check-circle"></i> Contact Lens</li>
+        <li><i class="fas fa-check-circle"></i> Multifocal / Toric IOL</li>
+        <li><i class="fas fa-check-circle"></i> Pentacam HR-3 for Comprehensive Corneal Assessment</li>
+        <li><i class="fas fa-check-circle"></i> YAG Laser for After-Cataract and Glaucoma</li>
+        <li><i class="fas fa-check-circle"></i> Photo Slit Lamp Imaging for Anterior Segment</li>
+        <li><i class="fas fa-check-circle"></i> Oculoplasty &amp; Cosmetic Surgery</li>
+        <li><i class="fas fa-check-circle"></i> Squint Exercise &amp; Surgery</li>
+        <li><i class="fas fa-check-circle"></i> Non-Contact Tonometer</li>
+        <li><i class="fas fa-check-circle"></i> B-Scan</li>
+        <li><i class="fas fa-check-circle"></i> FFA (Fluorescein Angiography) / Digital Fluorescein Imaging System</li>
+        <li><i class="fas fa-check-circle"></i> Green Laser for Retinal Photocoagulation</li>
+        <li><i class="fas fa-check-circle"></i> LIO (Laser Indirect Ophthalmoscope)</li>
+        <li><i class="fas fa-check-circle"></i> TTT Diode for ARMD</li>
+        <li><i class="fas fa-check-circle"></i> Advanced Vitreo-Retinal Surgery</li>
+        <li><i class="fas fa-check-circle"></i> Ocular Prosthesis</li>
+        <li><i class="fas fa-check-circle"></i> Anti-VEGF Treatment, including Avastin, Lucentis and Macugen for ARMD</li>
+      </ul>
+      <div style="text-align:center;">
+        <span class="expertise-note"><i class="fas fa-shield-alt"></i> Cashless Facilities Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VISION -->
+  <section class="lasik-section section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Purpose</span>
+        <h2>Our Mission and Vision</h2>
+        <p style="max-width:680px; margin:12px auto 0;">At Khanna Eye Centre, our mission and vision are rooted in providing quality eye care with compassion, accessibility, and the appropriate use of modern technology.</p>
+      </div>
+      <div class="mission-vision-grid">
+        <div class="mv-card">
+          <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> Keep pace with the latest developments and technologies in ophthalmology</li>
+            <li><i class="fas fa-check"></i> Provide quality eye care at an affordable cost</li>
+            <li><i class="fas fa-check"></i> Offer comprehensive eye care with a focus on patient needs</li>
+            <li><i class="fas fa-check"></i> Maintain a humane and compassionate approach to every patient</li>
+          </ul>
+        </div>
+        <div class="mv-card">
+          <h3><i class="fas fa-eye"></i> Our Vision</h3>
+          <ul>
+            <li><i class="fas fa-check"></i> To continue the legacy of Dr. B.N. Khanna by providing accessible, quality eye care while striving for excellence in ophthalmology. We aim to combine modern technology with responsible and compassionate patient care.</li>
+          </ul>
+        </div>
+        <div class="mv-guiding">
+          "For us, ophthalmology is not just a profession, but a commitment to patient care."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta-section">
+    <div class="container">
+      <h2>Book an Appointment at Khanna Eye Centre</h2>
+      <p>Whether you need a routine eye examination, vision correction consultation or treatment for an existing eye condition, our team is here to help you understand your eye care options.</p>
+      <a href="contact.html" class="btn btn-primary">Contact Us <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- EMPANELMENTS BAR -->
+  <section class="empanelments-bar">
+    <div class="container empanelments-inner">
+      <div class="empanel-left">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+          <strong>Empanelments &amp; Insurance Partners</strong>
+          <p>Cashless treatments &amp; reimbursement available with leading providers</p>
+        </div>
+      </div>
+      <div class="insurance-dropdown-wrap">
+        <a href="contact.html#insurance" class="btn btn-outline-sm insurance-trigger">
+          View Insurance Partners <i class="fas fa-chevron-down"></i>
+        </a>
+        <div class="insurance-dropdown">
+          <a href="contact.html#government-panel" class="insurance-option">
+            <div class="insurance-icon"><i class="fas fa-landmark"></i></div>
+            <div>
+              <strong>Government Panel</strong>
+              <p>CGHS, ECHS & Government empanelments</p>
+            </div>
+          </a>
+          <div class="insurance-divider"></div>
+          <a href="contact.html#private-tpa" class="insurance-option">
+            <div class="insurance-icon"><i class="fas fa-shield-alt"></i></div>
+            <div>
+              <strong>Private TPA</strong>
+              <p>Leading private insurance & TPA partners</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <h2>Khanna Eye Centre</h2>
+        </div>
+        <p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p>
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="treatments.html">Eye Treatments</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-searches">
+        <h4>Popular Searches</h4>
+        <ul>
+          <li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li>
+          <li><a href="treatments.html#cataract">Cataract</a></li>
+          <li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+          <li><a href="treatments.html#retina">Retina Treatment</a></li>
+          <li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</p>
+        <div class="footer-bottom-links">
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <span>|</span>
+          <a href="disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- APPOINTMENT MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow='';}">
+    <div class="modal-box">
+      <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow='';"><i class="fas fa-times"></i></button>
+      <h3>Book an Appointment</h3>
+      <p class="modal-sub">Fill in your details and we'll get back to you shortly.</p>
+      <form class="modal-form" id="modalForm">
+        <div class="modal-form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Enter your name" required />
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>Email (optional)</label>
+            <input type="email" placeholder="Enter your email" />
+          </div>
+          <div class="modal-form-group">
+            <label>Mobile Number</label>
+            <div class="modal-phone">
+              <span>+91</span>
+              <input type="tel" placeholder="Enter mobile number" required />
+            </div>
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>Treatment Needed</label>
+            <select>
+              <option value="" disabled selected>Select</option>
+              <option>LASIK Surgery</option>
+              <option>ICL Surgery</option>
+              <option>Cataract Surgery</option>
+              <option>Retina Treatment</option>
+              <option>Cornea Services</option>
+              <option>Glaucoma</option>
+              <option>Dry Eye Treatment</option>
+              <option>Diabetic Retinopathy</option>
+              <option>Pediatric Ophthalmology</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="modal-form-group">
+            <label>Preferred Time</label>
+            <input type="time" />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Make an Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/919354409885" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="main.js"></script>
+  <script>
+    document.querySelectorAll('.open-modal').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('modalOverlay').classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  </script>
+
+</body>
+</html>
