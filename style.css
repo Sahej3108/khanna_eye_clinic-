@@ -2258,7 +2258,8 @@ details[open] > .faq-question {
     z-index:999;
   }
 
-  .nav.active{
+  /* IMPORTANT: open, not active */
+  .nav.open{
     opacity:1;
     visibility:visible;
     transform:translateY(0);
@@ -2276,10 +2277,6 @@ details[open] > .faq-question {
     border-bottom:1px solid #eee;
   }
 
-  .nav li:last-child{
-    border-bottom:none;
-  }
-
   .nav a{
     display:flex;
     justify-content:space-between;
@@ -2287,43 +2284,19 @@ details[open] > .faq-question {
     padding:14px 0;
   }
 
-  /* Mobile dropdown */
-
   .dropdown{
-    display:none !important;
-    position:static !important;
-    opacity:1 !important;
-    visibility:visible !important;
-    box-shadow:none !important;
+    display:none;
+    position:static;
+    opacity:1;
+    visibility:visible;
+    transform:none;
+    box-shadow:none;
     padding-left:15px;
     background:#fafafa;
   }
 
   .has-dropdown.open .dropdown{
-    display:block !important;
-  }
-
-  .dropdown li{
-    border:none;
-  }
-
-  .dropdown a{
-    padding:10px 0;
-    font-size:14px;
-  }
-
-  /* Hamburger animation */
-
-  .hamburger.active span:nth-child(1){
-    transform:rotate(45deg) translate(5px,5px);
-  }
-
-  .hamburger.active span:nth-child(2){
-    opacity:0;
-  }
-
-  .hamburger.active span:nth-child(3){
-    transform:rotate(-45deg) translate(5px,-5px);
+    display:block;
   }
 }
 
