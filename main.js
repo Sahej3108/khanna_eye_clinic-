@@ -1,40 +1,35 @@
-/* =========================================================
-   KHANNA EYE CENTRE — MAIN JS (FULLY OPTIMIZED)
-   ========================================================= */
-
-document.addEventListener('DOMContentLoaded', function () {
-
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.getElementById("hamburger");
   const nav = document.getElementById("nav");
 
-  if (!hamburger || !nav) return;
-
+  // Hamburger
   hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
-    nav.classList.toggle("active");
+    nav.classList.toggle("open");
   });
 
-  // Mobile dropdown
-  document.querySelectorAll(".dropdown-toggle").forEach(item => {
-    item.addEventListener("click", e => {
+  // Eye Treatments dropdown
+  document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
-        item.parentElement.classList.toggle("open");
+        e.stopPropagation();
+        this.parentElement.classList.toggle("open");
       }
     });
   });
 
-  // Close menu after clicking a link
-  document.querySelectorAll("#navMenu a").forEach(link => {
+  // Close menu on normal links
+  document.querySelectorAll("#navMenu a").forEach((link) => {
     link.addEventListener("click", () => {
-      if (!link.classList.contains("dropdown-toggle")) {
+      if (!link.parentElement.classList.contains("has-dropdown")) {
         hamburger.classList.remove("active");
-        nav.classList.remove("active");
+        nav.classList.remove("open");
       }
     });
   });
-});
+
+  /* ---- STICKY HEADER ---- */
 
   /* ---- STICKY HEADER ---- */
   var header = document.getElementById('header');
@@ -309,3 +304,4 @@ document.querySelectorAll('.tacc-header').forEach(function(header){
 
 });
 });
+
