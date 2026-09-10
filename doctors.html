@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Team - Khanna Eye Centre | Experienced Ophthalmologists</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* Page-specific additions — kept minimal and reusing existing design tokens */
+.page-banner{
+background: var(--bg-light);
+padding: 64px 0 56px;
+text-align: center;
+}
+.page-banner .section-tag{ margin-bottom: 14px; }
+.page-banner h1{ color:#17344d; margin-bottom: 14px; }
+.page-banner p{ max-width: 680px; margin: 0 auto 10px; }
+.breadcrumb{ font-size:0.85rem; color: var(--text-light); margin-top: 14px; }
+.breadcrumb a{ color: var(--green); font-weight:600; }
+
+.doctor-block{
+display:grid;
+grid-template-columns: 0.85fr 1fr;
+gap:56px;
+align-items:start;
+}
+.doctor-block:not(:last-child){
+margin-bottom: 64px;
+padding-bottom: 64px;
+border-bottom: 1px solid var(--border);
+}
+.doctor-block.reverse .doctor-media{ order:2; }
+.doctor-block.reverse .doctor-content{ order:1; }
+
+.doctor-media{
+position: sticky;
+top: 110px;
+}
+.doctor-photo{
+width:100%;
+aspect-ratio:3/3.4;
+border-radius: var(--radius-lg);
+overflow:hidden;
+box-shadow: var(--shadow);
+background: var(--bg-light);
+}
+.doctor-photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+}
+
+.doctor-role-tag{
+display:inline-block;
+background: var(--green-light);
+color: var(--green-dark);
+font-weight:600;
+font-size:0.82rem;
+padding: 6px 16px;
+border-radius: 30px;
+margin-bottom: 14px;
+}
+.doctor-content h2{
+color:#17344d;
+margin-bottom: 4px;
+font-size: 1.7rem;
+}
+.doctor-qual{
+color: var(--text-light);
+font-size:0.9rem;
+font-style: italic;
+margin-bottom: 18px;
+}
+.doctor-content p{
+margin-bottom: 14px;
+}
+.doctor-sublist{
+margin: 20px 0;
+}
+.doctor-sublist h4{
+color: var(--green-dark);
+font-family: var(--font-display);
+font-size: 1.02rem;
+margin-bottom: 12px;
+display:flex;
+align-items:center;
+gap:8px;
+}
+.doctor-sublist ul{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+.doctor-sublist ul li{
+display:flex;
+align-items:flex-start;
+gap:10px;
+font-size: 0.92rem;
+color: var(--text-muted);
+}
+.doctor-sublist ul li i{
+color: var(--green);
+margin-top:3px;
+flex-shrink:0;
+}
+
+.team-intro-note{
+text-align:center;
+max-width: 720px;
+margin: 0 auto 8px;
+}
+
+.specialist-cta-section{
+background: #1a2e3a;
+position: relative;
+overflow: hidden;
+text-align:center;
+padding: 70px 0;
+}
+.specialist-cta-section::before{
+content:'';
+position:absolute;
+inset:0;
+background: rgba(15,30,45,0.72);
+z-index:0;
+}
+.specialist-cta-section .container{ position:relative; z-index:1; }
+.specialist-cta-section h2{ color:#fff; margin-bottom: 14px; }
+.specialist-cta-section p{ color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 30px; }
+
+@media (max-width: 900px){
+.doctor-block{
+grid-template-columns: 1fr;
+gap: 28px;
+}
+.doctor-block.reverse .doctor-media,
+.doctor-block.reverse .doctor-content{ order: initial; }
+.doctor-media{
+position: static;
+max-width: 320px;
+margin: 0 auto;
+}
+}
+
+@media (max-width: 480px){
+.doctor-content h2{ font-size:1.4rem; }
+.doctor-block:not(:last-child){
+margin-bottom: 44px;
+padding-bottom: 44px;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+<span><i class="far fa-clock"></i> Mon - Sun &nbsp; 8:00 AM - 8:00 PM</span>
+<div class="topbar-right">
+<a href="tel:9354409885"><i class="fas fa-phone"></i> 9354 409 885</a>
+</div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-img-wrap">
+<img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo">
+</div>
+</a>
+
+<nav class="nav" id="nav">
+<ul id="navMenu">
+<li><a href="index%20.html">Home</a></li>
+<li class="has-dropdown">
+<a href="treatments.html" class="dropdown-toggle">
+Eye Treatments <i class="fas fa-chevron-down"></i>
+</a>
+<ul class="dropdown">
+<li><a href="lasik.html">LASIK Surgery</a></li>
+<li><a href="icl.html">ICL Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cornea">Cornea Services</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html">View All Treatments</a></li>
+</ul>
+</li>
+<li><a href="doctors.html">Our Doctors</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="emplanelments.html">Emplanelments</a></li>
+</ul>
+</nav>
+
+<a href="#" class="btn btn-primary header-cta open-modal">
+Book Appointment
+</a>
+
+<button class="hamburger" id="hamburger" aria-label="Open Menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner">
+<div class="container">
+<span class="section-tag">Our Team</span>
+<h1>Experienced Ophthalmologists. Specialised Eye Care.</h1>
+<p>At Khanna Eye Centre, our team brings together experienced ophthalmologists and specialised eye surgeons with expertise across cataract, refractive, corneal, retinal, and uvea care.</p>
+<p>With decades of experience in ophthalmology, our doctors are involved not only in patient care but also in surgical training, academic activities and professional associations within the field.</p>
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Our Doctors</div>
+</div>
+</section>
+
+<!-- DR. RAJINDER KHANNA -->
+<section class="about-section section">
+<div class="container">
+
+<div class="doctor-block">
+<div class="doctor-media">
+<div class="doctor-photo">
+<img src="assets/img/rajendra-khanna.jpg" alt="Dr. Rajinder Khanna" />
+</div>
+</div>
+<div class="doctor-content">
+<span class="doctor-role-tag">Chief Surgeon</span>
+<h2>Dr. Rajinder Khanna</h2>
+<p>Dr. Rajinder Khanna is a leading cataract and refractive surgeon in Delhi NCR with more than 35 years of experience in private practice. He has also been actively involved in the surgical training of ophthalmologists across India.</p>
+<p>He completed his MBBS from Anugrah Narayan Medical College in 1979, followed by his postgraduation from MDU Medical College, Rohtak, in 1984. He completed his fellowship from Aravind Eye Hospital in 1985.</p>
+<p>Dr. Khanna has been associated with several developments in ophthalmic surgery and was among the pioneers of IOL surgery in North India. He was also among the early surgeons to introduce LASIK for spectacle removal in Delhi NCR and North India.</p>
+
+<div class="doctor-sublist">
+<h4><i class="fas fa-award"></i> Professional Milestones</h4>
+<ul>
+<li><i class="fas fa-check-circle"></i> Among the pioneers of PC IOL implantation in North India (1985)</li>
+<li><i class="fas fa-check-circle"></i> Among the pioneers to introduce FFA and photocoagulation in North India (1987)</li>
+<li><i class="fas fa-check-circle"></i> Among the pioneers to introduce phacoemulsification in India (1994)</li>
+<li><i class="fas fa-check-circle"></i> Among the pioneers to introduce Excimer laser procedures in India (1995)</li>
+<li><i class="fas fa-check-circle"></i> Among the pioneers to introduce LASIK in India (1997)</li>
+</ul>
+</div>
+
+<div class="doctor-sublist">
+<h4><i class="fas fa-users"></i> Professional Associations</h4>
+<ul>
+<li><i class="fas fa-check-circle"></i> Past Treasurer, Delhi Ophthalmological Society</li>
+<li><i class="fas fa-check-circle"></i> Former Chairman, Academic Research Committee, AIOS</li>
+<li><i class="fas fa-check-circle"></i> Member, Headquarters Maintenance Committee, AIOS</li>
+<li><i class="fas fa-check-circle"></i> DOS Representative at AIOS (2011–2013)</li>
+<li><i class="fas fa-check-circle"></i> Co-Chairman, Local Organising Committee of the 73rd AIOC held in Delhi</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- DR. SANJAY KHANNA -->
+<div class="doctor-block reverse">
+<div class="doctor-media">
+<div class="doctor-photo">
+<img src="assets/img/sanjay-khanna.jpg" alt="Dr. Sanjay Khanna" />
+</div>
+</div>
+<div class="doctor-content">
+<span class="doctor-role-tag">Senior Ophthalmologist</span>
+<h2>Dr. Sanjay Khanna</h2>
+<p>Dr. Sanjay Khanna completed his MBBS from King George Medical College, Lucknow, followed by his MS in Ophthalmology from Gulbarga in 1993.</p>
+<p>With more than 25 years of experience in eye care, he has been associated with modern LASIK and refractive surgery and has been involved in the training of ophthalmologists.</p>
+<p>Dr. Khanna was among the early practitioners of LASIK in Delhi and was also among the first to introduce customised LASIK procedures in India and Asia.</p>
+<p>He has presented papers and participated as a guest faculty member at various national conferences.</p>
+</div>
+</div>
+
+<!-- DR. DEEPAK AGGARWAL -->
+<div class="doctor-block">
+<div class="doctor-media">
+<div class="doctor-photo">
+<img src="assets/img/deepak-aggarwal.jpg" alt="Dr. Deepak Aggarwal" />
+</div>
+</div>
+<div class="doctor-content">
+<span class="doctor-role-tag">Consultant - Vitreo-Retina &amp; Uvea</span>
+<h2>Dr. Deepak Aggarwal</h2>
+<p class="doctor-qual">MBBS, MD (AIIMS), FMRF (SN), FICO (UK)</p>
+<p>Dr. Deepak Aggarwal is a dedicated Vitreo-Retinal Surgeon and Uvea Specialist at Khanna Eye Centre. He completed his postgraduate training at the All India Institute of Medical Sciences (AIIMS) and his fellowship in Vitreo-Retina from Sankara Nethralaya.</p>
+<p>He currently heads the Retina Department at Khanna Eye Centre and has more than 15 years of experience in diagnostic and surgical vitreoretinal procedures.</p>
+<p>His areas of clinical expertise include:</p>
+
+<div class="doctor-sublist">
+<ul>
+<li><i class="fas fa-check-circle"></i> Diabetic retinopathy</li>
+<li><i class="fas fa-check-circle"></i> Age-related macular degeneration (ARMD)</li>
+<li><i class="fas fa-check-circle"></i> CNVM</li>
+<li><i class="fas fa-check-circle"></i> Retinal detachment</li>
+<li><i class="fas fa-check-circle"></i> Uveitis</li>
+<li><i class="fas fa-check-circle"></i> Other vitreoretinal conditions</li>
+</ul>
+</div>
+
+<p>He has been performing microincision sutureless vitrectomy surgeries for more than 15 years.</p>
+</div>
+</div>
+
+<!-- DR. AMAN KHANNA -->
+<div class="doctor-block reverse">
+<div class="doctor-media">
+<div class="doctor-photo">
+<img src="assets/img/aman-khanna.png" alt="Dr. Aman Khanna" />
+</div>
+</div>
+<div class="doctor-content">
+<span class="doctor-role-tag">Consultant -  Phaco, Vitreo-Retina &amp; Uvea</span>
+<h2>Dr. Aman Khanna</h2>
+<p class="doctor-qual">MBBS, MS, FRVS</p>
+<p>Dr. Aman Khanna is a Phaco, Vitreo-Retina and Uvea Consultant at Khanna Eye Centre. He completed his graduation from NDMVP's Medical College, Nashik, followed by his postgraduate training in Pune.</p>
+<p>He completed his fellowship in Phacoemulsification and Vitreo-Retina from Sadguru Netr Chikitsalaya, Chitrakoot.</p>
+<p>He has experience in managing a range of retinal conditions, including:</p>
+
+<div class="doctor-sublist">
+<ul>
+<li><i class="fas fa-check-circle"></i> Diabetic retinopathy</li>
+<li><i class="fas fa-check-circle"></i> Age-related macular degeneration (ARMD)</li>
+<li><i class="fas fa-check-circle"></i> CNVM</li>
+<li><i class="fas fa-check-circle"></i> Retinal detachment</li>
+<li><i class="fas fa-check-circle"></i> Uveitis</li>
+<li><i class="fas fa-check-circle"></i> Other vitreoretinal conditions</li>
+</ul>
+</div>
+
+<p>Dr. Aman Khanna has also been associated with teaching and training activities and has served as an instructor at state- and national-level conferences. He has been invited as faculty at various state and national conferences.</p>
+</div>
+</div>
+
+<!-- DR. ANKITA KHANNA -->
+<div class="doctor-block">
+<div class="doctor-media">
+<div class="doctor-photo">
+<img src="assets/img/ankita-khanna.png" alt="Dr. Ankita Khanna" />
+</div>
+</div>
+<div class="doctor-content">
+<span class="doctor-role-tag">Consultant- Cornea, Phaco &amp; Refractive Surgery</span>
+<h2>Dr. Ankita Khanna</h2>
+<p class="doctor-qual">MBBS, MS, FCRS</p>
+<p>Dr. Ankita Khanna is a Cornea, Phaco and Refractive Consultant at Khanna Eye Centre, New Delhi.</p>
+<p>She completed her graduation in medicine and postgraduate training in ophthalmology from VMMC and Safdarjung Hospital, Delhi. She subsequently completed her fellowship in Phacoemulsification, Cornea and Refractive Surgery from Sadguru Netr Chikitsalaya, Chitrakoot.</p>
+<p>She has experience in refractive surgery and corneal procedures, including corneal transplantation. She has also cleared the Clinical Examination of the International Council of Ophthalmology (ICO), London.</p>
+
+<div class="doctor-sublist">
+<h4><i class="fas fa-eye"></i> Areas of Expertise</h4>
+<ul>
+<li><i class="fas fa-check-circle"></i> Corneal conditions</li>
+<li><i class="fas fa-check-circle"></i> Keratoconus</li>
+<li><i class="fas fa-check-circle"></i> Corneal ulcers</li>
+<li><i class="fas fa-check-circle"></i> Dry eye disease</li>
+<li><i class="fas fa-check-circle"></i> Computer vision syndrome</li>
+<li><i class="fas fa-check-circle"></i> Corneal transplantation</li>
+<li><i class="fas fa-check-circle"></i> Refractive and spectacle-removal surgeries</li>
+<li><i class="fas fa-check-circle"></i> Phacoemulsification</li>
+</ul>
+</div>
+
+<p>Dr. Ankita Khanna has presented oral papers and posters at national and international conferences. She has also participated as an instructor at state and national-level conferences and is actively involved in teaching and training activities.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- A TEAM ACROSS MULTIPLE AREAS -->
+<section class="treatments-section section" style="background: var(--bg-light);">
+<div class="container">
+<div class="section-header">
+<span class="section-tag">Comprehensive Expertise</span>
+<h2>A Team Across Multiple Areas of Eye Care</h2>
+</div>
+<p class="team-intro-note">From cataract and refractive surgery to corneal, retinal and uvea conditions, the Khanna Eye Centre team provides specialised ophthalmic care across a range of eye conditions and procedures.</p>
+<div class="treatments-footer">
+<a href="#" class="btn btn-primary open-modal">Book an Appointment <i class="fas fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
+
+<!-- LOOKING FOR THE RIGHT SPECIALIST -->
+<section class="specialist-cta-section">
+<div class="container">
+<h2>Looking for the Right Eye Specialist?</h2>
+<p>Different eye conditions may require assessment by a specialist in a particular area of ophthalmology. Our team can help you identify the appropriate consultation based on your symptoms, diagnosis or treatment requirements.</p>
+<a href="contact.html" class="btn btn-primary">Find a Specialist <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
+
+<!-- EMPANELMENTS BAR -->
+<section class="empanelments-bar">
+<div class="container empanelments-inner">
+<div class="empanel-left">
+<i class="fas fa-shield-alt"></i>
+<div>
+<strong>Empanelments &amp; Insurance Partners</strong>
+<p>Cashless treatments &amp; reimbursement available with leading providers</p>
+</div>
+</div>
+<div class="insurance-dropdown-wrap">
+<a href="contact.html#insurance" class="btn btn-outline-sm insurance-trigger">
+View Insurance Partners <i class="fas fa-chevron-down"></i>
+</a>
+<div class="insurance-dropdown">
+<a href="contact.html#government-panel" class="insurance-option">
+<div class="insurance-icon"><i class="fas fa-landmark"></i></div>
+<div>
+<strong>Government Panel</strong>
+<p>CGHS, ECHS & Government empanelments</p>
+</div>
+</a>
+<div class="insurance-divider"></div>
+<a href="contact.html#private-tpa" class="insurance-option">
+<div class="insurance-icon"><i class="fas fa-shield-alt"></i></div>
+<div>
+<strong>Private TPA</strong>
+<p>Leading private insurance & TPA partners</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-grid">
+<div class="footer-brand">
+<div class="footer-logo">
+<h2>Khanna Eye Centre</h2>
+</div>
+<p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="treatments.html">Eye Treatments</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-searches">
+<h4>Popular Searches</h4>
+<ul>
+<li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container footer-bottom-inner">
+<p>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</p>
+<div class="footer-bottom-links">
+<a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+<span>|</span>
+<a href="privacy-policy.html">Privacy Policy</a>
+<span>|</span>
+<a href="disclaimer.html">Disclaimer</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- APPOINTMENT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow='';}">
+<div class="modal-box">
+<button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow='';"><i class="fas fa-times"></i></button>
+<h3>Book an Appointment</h3>
+<p class="modal-sub">Fill in your details and we'll get back to you shortly.</p>
+<form class="modal-form" id="modalForm">
+<div class="modal-form-group">
+<label>Your Name</label>
+<input type="text" placeholder="Enter your name" required />
+</div>
+<div class="modal-form-row">
+<div class="modal-form-group">
+<label>Email (optional)</label>
+<input type="email" placeholder="Enter your email" />
+</div>
+<div class="modal-form-group">
+<label>Mobile Number</label>
+<div class="modal-phone">
+<span>+91</span>
+<input type="tel" placeholder="Enter mobile number" required />
+</div>
+</div>
+</div>
+<div class="modal-form-row">
+<div class="modal-form-group">
+<label>Treatment Needed</label>
+<select>
+<option value="" disabled selected>Select</option>
+<option>LASIK Surgery</option>
+<option>ICL Surgery</option>
+<option>Cataract Surgery</option>
+<option>Retina Treatment</option>
+<option>Cornea Services</option>
+<option>Glaucoma</option>
+<option>Dry Eye Treatment</option>
+<option>Diabetic Retinopathy</option>
+<option>Pediatric Ophthalmology</option>
+<option>Other</option>
+</select>
+</div>
+<div class="modal-form-group">
+<label>Preferred Time</label>
+<input type="time" />
+</div>
+</div>
+<button type="submit" class="btn btn-primary btn-full">Make an Appointment</button>
+</form>
+</div>
+</div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919354409885" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="main.js"></script>
+<script>
+document.querySelectorAll('.open-modal').forEach(function(btn) {
+btn.addEventListener('click', function(e) {
+e.preventDefault();
+document.getElementById('modalOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+});
+});
+</script>
+
+</body>
+</html>

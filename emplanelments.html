@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Empanelments & Insurance Partners - Khanna Eye Centre</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* Page-specific additions — kept minimal and reusing existing design tokens */
+.page-banner{
+background: var(--bg-light);
+padding: 64px 0 56px;
+text-align: center;
+}
+.page-banner .section-tag{ margin-bottom: 14px; }
+.page-banner h1{ color:#17344d; margin-bottom: 14px; }
+.page-banner p{ max-width: 680px; margin: 0 auto 22px; }
+.breadcrumb{ font-size:0.85rem; color: var(--text-light); margin-top: 14px; }
+.breadcrumb a{ color: var(--green); font-weight:600; }
+
+.panel-intro-text{
+max-width: 780px;
+margin: 0 auto 32px;
+text-align:center;
+}
+
+.panel-section-header{
+text-align:center;
+max-width: 780px;
+margin: 0 auto 32px;
+}
+.panel-section-header h2{ color:#17344d; margin-bottom: 10px; }
+
+.panel-grid{
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 14px;
+}
+.panel-chip{
+display:flex;
+align-items:center;
+gap: 12px;
+background:#fff;
+border:1px solid var(--border);
+border-radius: var(--radius-lg);
+padding: 16px 18px;
+box-shadow: var(--shadow);
+transition: all var(--transition);
+font-size:0.9rem;
+font-weight:600;
+color: var(--text);
+}
+.panel-chip:hover{ box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.panel-chip i{
+color: var(--green);
+font-size:1.1rem;
+flex-shrink:0;
+}
+
+.panel-subheading{
+font-family: var(--font-display);
+font-size: 1.15rem;
+color: var(--green-dark);
+margin: 44px 0 18px;
+text-align:center;
+}
+
+.steps-grid{
+display:grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 24px;
+}
+.step-card{
+background:#fff;
+border:1px solid var(--border);
+border-radius: var(--radius-lg);
+padding: 30px 22px;
+box-shadow: var(--shadow);
+text-align:center;
+transition: all var(--transition);
+}
+.step-card:hover{ box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.step-number{
+width:44px;
+height:44px;
+border-radius:50%;
+background: var(--green);
+color:#fff;
+font-family: var(--font-display);
+font-size:1.1rem;
+display:flex;
+align-items:center;
+justify-content:center;
+margin: 0 auto 16px;
+}
+.step-card h4{
+color:#17344d;
+font-size:1.02rem;
+margin-bottom: 8px;
+}
+.step-card p{
+font-size:0.88rem;
+color: var(--text-muted);
+margin:0;
+}
+
+.help-cta-section{
+background: #1a2e3a;
+position: relative;
+overflow: hidden;
+text-align:center;
+padding: 70px 0;
+}
+.help-cta-section::before{
+content:'';
+position:absolute;
+inset:0;
+background: rgba(15,30,45,0.72);
+z-index:0;
+}
+.help-cta-section .container{ position:relative; z-index:1; }
+.help-cta-section h2{ color:#fff; margin-bottom: 14px; }
+.help-cta-section p{ color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto 30px; }
+
+.panel-disclaimer{
+background: var(--bg-light);
+border-top: 1px solid var(--border);
+padding: 26px 0;
+}
+.panel-disclaimer p{
+max-width: 900px;
+margin: 0 auto;
+font-size: 0.82rem;
+color: var(--text-light);
+text-align:center;
+line-height:1.7;
+}
+
+@media (max-width: 900px){
+.panel-grid{ grid-template-columns: repeat(2, 1fr); }
+.steps-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px){
+.panel-grid{ grid-template-columns: 1fr; }
+.steps-grid{ grid-template-columns: 1fr; }
+.panel-chip{ font-size:0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+<span><i class="far fa-clock"></i> Mon - Sun &nbsp; 8:00 AM - 8:00 PM</span>
+<div class="topbar-right">
+<a href="tel:9354409885"><i class="fas fa-phone"></i> 9354 409 885</a>
+</div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+<div class="container header-inner">
+<a href="index.html" class="logo">
+<div class="logo-img-wrap">
+<img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo">
+</div>
+</a>
+
+<nav class="nav" id="nav">
+<ul id="navMenu">
+<li><a href="index%20.html">Home</a></li>
+<li class="has-dropdown">
+<a href="treatments.html" class="dropdown-toggle">
+Eye Treatments <i class="fas fa-chevron-down"></i>
+</a>
+<ul class="dropdown">
+<li><a href="lasik.html">LASIK Surgery</a></li>
+<li><a href="icl.html">ICL Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cornea">Cornea Services</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html">View All Treatments</a></li>
+</ul>
+</li>
+<li><a href="doctors.html">Our Doctors</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="emplanelments.html">Emplanelments</a></li>
+</ul>
+</nav>
+
+<a href="#" class="btn btn-primary header-cta open-modal">
+Book Appointment
+</a>
+
+<button class="hamburger" id="hamburger" aria-label="Open Menu">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="page-banner" id="insurance">
+<div class="container">
+<span class="section-tag">Empanelments &amp; Insurance Partners</span>
+<h1>Empanelments at Khanna Eye Centre</h1>
+<p>At Khanna Eye Centre, we are empanelled with various government organisations, Third-Party Administrators (TPAs), and insurance providers. This allows eligible patients to access eye care and surgical services under their applicable health insurance or organisational healthcare benefits.</p>
+<p>Our empanelment network includes government panels and private TPAs. If you are covered under any of the listed organisations, our team can help you understand the applicable coverage, documentation, and cashless treatment process.</p>
+<a href="#" class="btn btn-primary open-modal">Check Your Insurance Coverage</a>
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Empanelments &amp; Insurance Partners</div>
+</div>
+</section>
+
+<!-- GOVERNMENT PANELS -->
+<section class="about-section section" id="government-panel">
+<div class="container">
+<div class="panel-section-header">
+<span class="section-tag">Government Panels</span>
+<h2>Government Panels</h2>
+<p>Khanna Eye Centre is empanelled with several government organisations and healthcare schemes. Eligible beneficiaries can contact our team to understand the available benefits and treatment coverage.</p>
+</div>
+<div class="panel-grid">
+<div class="panel-chip"><i class="fas fa-landmark"></i> CGHS</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> DGEHS</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> DDA</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> DJB</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> MCD/EDMC</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> ECHS</div>
+<div class="panel-chip"><i class="fas fa-landmark"></i> UPSC</div>
+</div>
+</div>
+</section>
+
+<!-- PRIVATE TPA & INSURANCE PANELS -->
+<section class="treatments-section section" style="background: var(--bg-light);" id="private-tpa">
+<div class="container">
+<div class="panel-section-header">
+<span class="section-tag">Private TPA &amp; Insurance Panels</span>
+<h2>Private TPA &amp; Insurance Panels</h2>
+<p>We also work with a range of private Third-Party Administrators (TPAs) and insurance providers. Coverage and cashless treatment eligibility may vary depending on your policy and the treatment required.</p>
+</div>
+
+<h3 class="panel-subheading">TPA Partners</h3>
+<div class="panel-grid">
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> RAKSHA TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> PARK MEDICLAM</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> ALANKIT TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> MEDI ASSIST TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> VIPUL MED CORP TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> SAFEWAY TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> ERICSON TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> IFFCO TOKIO TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> EAST WEST TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> GENESIS INDIA TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> MEDSAVE CORP. TPA</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> HERITAGE HEALTH TPA PVT. LTD.</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> UNITED HEALTH CARE PAREKH TPA PVT. LTD.</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> PARAMOUNT HEALTH SERVICES (TPA) PVT. LTD.</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> STAR HEALTH AND ALLIED INSURANCE COMPANY</div>
+<div class="panel-chip"><i class="fas fa-shield-alt"></i> DEDICATED HEALTH CARE SERVICES TPA</div>
+</div>
+
+<h3 class="panel-subheading">Insurance &amp; Healthcare Partners</h3>
+<div class="panel-grid">
+<div class="panel-chip"><i class="fas fa-file-medical"></i> BAJAJ ALLIANZ INSURANCE CO. LTD.</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> RELIGARE HEALTH INSURANCE COMPANY LIMITED</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> INDIAN HEALTH ORGANISATION</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> HDFC ERGO TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> MEDICLAIM TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> MEDIASSIST INDIA TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> HEALTH INSURANCE TPA INDIA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> MEDICARE TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> MAX BUPA HEALTH INSURANCE</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> VIDAL HEALTH TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> GOOD HEALTH TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> FOCUS TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> FAMILY HEALTH PLAN TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> MD INDIA TPA</div>
+<div class="panel-chip"><i class="fas fa-file-medical"></i> VISION E-MED SOLUTION INSURANCE TPA PVT. LTD.</div>
+</div>
+</div>
+</section>
+
+<!-- HOW TO USE YOUR INSURANCE OR TPA BENEFITS -->
+<section class="about-section section">
+<div class="container">
+<div class="panel-section-header">
+<span class="section-tag">Process</span>
+<h2>How to Use Your Insurance or TPA Benefits?</h2>
+<p>If you are covered under one of our empanelled organisations, our team can guide you through the process.</p>
+</div>
+<div class="steps-grid">
+<div class="step-card">
+<div class="step-number">1</div>
+<h4>Check your coverage</h4>
+<p>Confirm whether your insurance policy or healthcare scheme covers the required eye treatment.</p>
+</div>
+<div class="step-card">
+<div class="step-number">2</div>
+<h4>Share your documents</h4>
+<p>Keep your insurance card, government health card, and other required documents ready.</p>
+</div>
+<div class="step-card">
+<div class="step-number">3</div>
+<h4>Confirm eligibility</h4>
+<p>Our team can help verify your empanelment and the applicable treatment benefits.</p>
+</div>
+<div class="step-card">
+<div class="step-number">4</div>
+<h4>Proceed with treatment</h4>
+<p>Once the required approvals are completed, you can proceed with your treatment as per the terms of your policy or scheme.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- NEED HELP CTA -->
+<section class="help-cta-section">
+<div class="container">
+<h2>Need Help With Your Insurance Coverage?</h2>
+<p>Not sure whether your policy is accepted at Khanna Eye Centre? Our team can help you check your eligibility and understand the documentation required for your treatment.</p>
+<a href="contact.html" class="btn btn-primary">Contact Our Team <i class="fas fa-arrow-right"></i></a>
+</div>
+</section>
+
+<!-- DISCLAIMER -->
+<section class="panel-disclaimer">
+<div class="container">
+<p>Empanelment does not guarantee coverage for every treatment or procedure. Coverage, cashless facility, and approval are subject to the terms and conditions of the applicable insurance policy or healthcare scheme. Please contact Khanna Eye Centre for the latest information regarding your eligibility and treatment coverage.</p>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-grid">
+<div class="footer-brand">
+<div class="footer-logo">
+<h2>Khanna Eye Centre</h2>
+</div>
+<p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="treatments.html">Eye Treatments</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-searches">
+<h4>Popular Searches</h4>
+<ul>
+<li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container footer-bottom-inner">
+<p>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</p>
+<div class="footer-bottom-links">
+<a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+<span>|</span>
+<a href="privacy-policy.html">Privacy Policy</a>
+<span>|</span>
+<a href="disclaimer.html">Disclaimer</a>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- APPOINTMENT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow='';}">
+<div class="modal-box">
+<button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow='';"><i class="fas fa-times"></i></button>
+<h3>Book an Appointment</h3>
+<p class="modal-sub">Fill in your details and we'll get back to you shortly.</p>
+<form class="modal-form" id="modalForm">
+<div class="modal-form-group">
+<label>Your Name</label>
+<input type="text" placeholder="Enter your name" required />
+</div>
+<div class="modal-form-row">
+<div class="modal-form-group">
+<label>Email (optional)</label>
+<input type="email" placeholder="Enter your email" />
+</div>
+<div class="modal-form-group">
+<label>Mobile Number</label>
+<div class="modal-phone">
+<span>+91</span>
+<input type="tel" placeholder="Enter mobile number" required />
+</div>
+</div>
+</div>
+<div class="modal-form-row">
+<div class="modal-form-group">
+<label>Treatment Needed</label>
+<select>
+<option value="" disabled selected>Select</option>
+<option>LASIK Surgery</option>
+<option>ICL Surgery</option>
+<option>Cataract Surgery</option>
+<option>Retina Treatment</option>
+<option>Cornea Services</option>
+<option>Glaucoma</option>
+<option>Dry Eye Treatment</option>
+<option>Diabetic Retinopathy</option>
+<option>Pediatric Ophthalmology</option>
+<option>Other</option>
+</select>
+</div>
+<div class="modal-form-group">
+<label>Preferred Time</label>
+<input type="time" />
+</div>
+</div>
+<button type="submit" class="btn btn-primary btn-full">Make an Appointment</button>
+</form>
+</div>
+</div>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/919354409885" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="main.js"></script>
+<script>
+document.querySelectorAll('.open-modal').forEach(function(btn) {
+btn.addEventListener('click', function(e) {
+e.preventDefault();
+document.getElementById('modalOverlay').classList.add('open');
+document.body.style.overflow = 'hidden';
+});
+});
+</script>
+
+</body>
+</html>
