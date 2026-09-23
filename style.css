@@ -209,7 +209,7 @@ p { color: var(--text-muted); }
 .header-inner {
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 60px;
   padding-top: 14px;
   padding-bottom: 14px;
 }
