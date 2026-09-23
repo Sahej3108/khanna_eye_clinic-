@@ -11,157 +11,205 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="blog.css">
+
+<!-- ===== NEW: styles for the "Expert Insights" section (or move into style.css) ===== -->
+<style>
+.insights{background:#fff;border-bottom:1px solid #E1E9F1;padding:64px 0;}
+.insights-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:start;}
+.insights h2{font-family:'Poppins',sans-serif;font-weight:700;color:#0A2A48;font-size:clamp(26px,3.4vw,38px);line-height:1.2;margin:0 0 28px;}
+.insights-copy p{margin:0 0 18px;font-size:16px;line-height:1.75;color:#3B4C5E;max-width:68ch;}
+.insights-copy p:first-child{font-size:17px;color:#1C2B3A;}
+.insights-copy p:last-child{margin-bottom:0;}
+@media (max-width:820px){
+  .insights{padding:44px 0;}
+  .insights-grid{grid-template-columns:1fr;gap:8px;}
+  .insights h2{margin-bottom:20px;}
+  .insights-cta{margin-top:24px;}
+}
+</style>
+<!-- ===== END NEW STYLES ===== -->
 </head>
 <body>
+
 <div class="topbar"><div class="wrap">
-  <span class="hours">Mon - Sun 8:00 AM - 8:00 PM</span>
-  <a href="tel:9354409885">9354 409 885</a>
+<span class="hours">Mon - Sun 8:00 AM - 8:00 PM</span>
+<a href="tel:9354409885">9354 409 885</a>
 </div></div>
+
 <header class="site-header"><div class="wrap header-in">
-  <a class="brand" href="index.html" aria-label="Khanna Eye Centre - home">
-    <img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo">
-    <span class="brand-text">Khanna Eye Centre<small>Trusted Eye Care Since 1951</small></span>
-  </a>
-  <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
-  <ul class="nav">
-    <li><a href="index%20.html">Home</a></li>
-    <li class="has-sub"><button aria-expanded="false" aria-haspopup="true">Eye Treatments <i class="caret"></i></button>
-      <ul class="sub">
-        <li><a href="lasik.html">LASIK Surgery</a></li>
-        <li><a href="icl.html">ICL Surgery</a></li>
-        <li><a href="treatments.html#cataract">Cataract Surgery</a></li>
-        <li><a href="treatments.html#retina">Retina Treatment</a></li>
-        <li><a href="treatments.html#cornea">Cornea Services</a></li>
-        <li><a href="treatments.html#glaucoma">Glaucoma</a></li>
-        <li><a href="treatments.html">View All Treatments</a></li>
-      </ul>
-    </li>
-    <li><a href="doctors.html">Our Doctors</a></li>
-    <li><a href="blogs.html" aria-current="page">Blogs</a></li>
-    <li><a href="about.html">About Us</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="emplanelments.html">Emplanelments</a></li>
-    <li class="nav-cta"><a href="#" data-book class="btn btn-accent">Book Appointment</a></li>
-  </ul>
-  <a href="#" data-book class="btn btn-accent header-cta">Book Appointment</a>
+<a class="brand" href="index.html" aria-label="Khanna Eye Centre - home">
+<img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo">
+<span class="brand-text">Khanna Eye Centre<small>Trusted Eye Care Since 1951</small></span>
+</a>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+<ul class="nav">
+<li><a href="index.html">Home</a></li>
+<li class="has-sub"><button aria-expanded="false" aria-haspopup="true">Eye Treatments <i class="caret"></i></button>
+<ul class="sub">
+<li><a href="lasik.html">LASIK Surgery</a></li>
+<li><a href="icl.html">ICL Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cornea">Cornea Services</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html">View All Treatments</a></li>
+</ul>
+</li>
+<li><a href="doctors.html">Our Doctors</a></li>
+<li><a href="blogs.html" aria-current="page">Blogs</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="emplanelments.html">Emplanelments</a></li>
+<li class="nav-cta"><a href="#" data-book class="btn btn-accent">Book Appointment</a></li>
+</ul>
+<a href="#" data-book class="btn btn-accent header-cta">Book Appointment</a>
 </div></header>
+
 <main>
+
 <section class="page-hero"><div class="wrap">
-  <ol class="crumbs" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Blogs</li></ol>
-  <h1>Understanding Eye Health &amp; Advanced Vision Care</h1>
-  <p>Practical advice from the eye specialists at Khanna Eye Centre on everyday eye care, cataract surgery, screen strain and diabetic eye disease.</p>
+<ol class="crumbs" aria-label="Breadcrumb"><li><a href="index.html">Home</a></li><li aria-current="page">Blogs</li></ol>
+<h1>Understanding Eye Health &amp; Advanced Vision Care</h1>
+<p>Practical advice from the eye specialists at Khanna Eye Centre on everyday eye care, cataract surgery, screen strain and diabetic eye disease.</p>
 </div></section>
 
+<!-- ===== NEW SECTION START: Expert Insights ===== -->
+<section class="insights" aria-labelledby="insightsTitle"><div class="wrap">
+<div class="insights-grid">
+<div>
+<h2 id="insightsTitle">Expert Insights for Better Eye Health</h2>
+<a href="blogs.html#blogGrid" class="btn btn-accent insights-cta">Explore Our Blogs</a>
+</div>
+<div class="insights-copy">
+<p>Stay informed about your eye health with expert insights, practical tips, and the latest information on vision care. Our blog brings together useful resources on common eye conditions, advanced treatments, surgical procedures, eye-care tips, and ways to maintain healthy vision.</p>
+<p>Whether you are looking to understand a particular eye condition, learn more about a treatment, or find answers to common questions about your eyes, our articles are designed to make eye care easier to understand.</p>
+<p>Explore our latest articles to learn about symptoms, treatment options, preventive care, and advancements in ophthalmology. Our goal is to provide clear and reliable information to help you make informed decisions about your eye health.</p>
+</div>
+</div>
+</div></section>
+<!-- ===== NEW SECTION END ===== -->
+
 <section class="toolbar" aria-label="Filter articles"><div class="wrap">
-  <div class="chips" role="group" aria-label="Filter by topic"><button class="chip" type="button" data-cat="all" aria-pressed="true">All</button><button class="chip" type="button" data-cat="Eye Care Tips" aria-pressed="false">Eye Care Tips</button><button class="chip" type="button" data-cat="Cataract" aria-pressed="false">Cataract</button><button class="chip" type="button" data-cat="Digital Eye Health" aria-pressed="false">Digital Eye Health</button><button class="chip" type="button" data-cat="Retina &amp; Diabetes" aria-pressed="false">Retina &amp; Diabetes</button></div>
-  <div class="search">
-    <label class="sr-only" for="blogSearch">Search articles</label>
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.500-3.500"/></svg>
-    <input id="blogSearch" type="search" placeholder="Search articles" autocomplete="off">
-  </div>
+<div class="chips" role="group" aria-label="Filter by topic"><button class="chip" type="button" data-cat="all" aria-pressed="true">All</button><button class="chip" type="button" data-cat="Eye Care Tips" aria-pressed="false">Eye Care Tips</button><button class="chip" type="button" data-cat="Cataract" aria-pressed="false">Cataract</button><button class="chip" type="button" data-cat="Digital Eye Health" aria-pressed="false">Digital Eye Health</button><button class="chip" type="button" data-cat="Retina &amp; Diabetes" aria-pressed="false">Retina &amp; Diabetes</button></div>
+<div class="search">
+<label class="sr-only" for="blogSearch">Search articles</label>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.500-3.500"/></svg>
+<input id="blogSearch" type="search" placeholder="Search articles" autocomplete="off">
+</div>
 </div></section>
 
 <section class="blog-section"><div class="wrap">
-  <p class="result-count" id="resultCount" aria-live="polite"></p>
-  <div class="blog-grid" id="blogGrid">
-    <article class="post-card is-featured" data-cat="Eye Care Tips" data-text="how to take care of your eyes daily? use uv-protected sunglasses uv-rays from the sun can have significant dangerous effects on our eyes over prolonged exposure. uv rays can affect our central vision, damaging the macula, which is main visual part of the retina in the back of the eye. eye care tips">
-      <a class="thumb" href="blog-post-page.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_1.jpg" alt="" loading="eager"></a>
-      <div class="body">
-        <span class="tag">Eye Care Tips</span>
-        <h3><a href="blog-post-page.html">How to take care of your eyes daily?</a></h3>
-        <p class="sub-title">Use UV-Protected Sunglasses</p>
-        <p class="excerpt">UV-rays from the sun can have significant dangerous effects on our eyes over prolonged exposure. UV rays can affect our central vision, damaging the macula, which is main visual part of the retina in the back of the eye.</p>
-        <div class="foot"><span>2 min read</span><a class="read-more" href="blog-post-page.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-    </article>
-    <article class="post-card" data-cat="Cataract" data-text="facts about cataract and robotic cataract surgery what is cataract? a cataract is the clouding or opacification of the lens inside the eye that prevents clear and sharp vision, (just like fogging of your glasses or windscreen of the car due to moisture). cataract">
-      <a class="thumb" href="blog-post-page2.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_2.jpg" alt="" loading="lazy"></a>
-      <div class="body">
-        <span class="tag">Cataract</span>
-        <h3><a href="blog-post-page2.html">Facts about Cataract and Robotic Cataract Surgery</a></h3>
-        <p class="sub-title">What is Cataract?</p>
-        <p class="excerpt">A cataract is the clouding or Opacification of the lens inside the eye that prevents clear and sharp Vision, (just like fogging of your glasses or windscreen of the car due to moisture).</p>
-        <div class="foot"><span>3 min read</span><a class="read-more" href="blog-post-page2.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-    </article>
-    <article class="post-card" data-cat="Digital Eye Health" data-text="computer vision syndrome do you experience? headache, eye irritation, blurry vision, burning eyes, excessive tearing, eye fatigue, frequent blinking. you might be suffering from computer vision syndrome - a common problem with most of the computer users due to prolonged usage of computers. digital eye health">
-      <a class="thumb" href="blog-post-page3.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_3.jpg" alt="" loading="lazy"></a>
-      <div class="body">
-        <span class="tag">Digital Eye Health</span>
-        <h3><a href="blog-post-page3.html">Computer Vision Syndrome</a></h3>
-        <p class="sub-title">Do you Experience?</p>
-        <p class="excerpt">Headache, eye irritation, blurry vision, burning eyes, excessive tearing, eye fatigue, frequent blinking. You might be suffering from Computer Vision Syndrome - a common problem with most of the computer users due to prolonged usage of computers.</p>
-        <div class="foot"><span>1 min read</span><a class="read-more" href="blog-post-page3.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-    </article>
-    <article class="post-card" data-cat="Retina &amp; Diabetes" data-text="what is diabetic retinopathy?  fact check: there are approximately 70.2 million diabetic patients in india and as per reports this number might soar to around 90 million by 2030, probably the reason why india is becoming the diabetic capital of the world. retina &amp; diabetes">
-      <a class="thumb" href="blog-post-page4.html" tabindex="-1" aria-hidden="true"><img src="assets/img/Diabetic%20Retinopathy.jpg" alt="" loading="lazy"></a>
-      <div class="body">
-        <span class="tag">Retina &amp; Diabetes</span>
-        <h3><a href="blog-post-page4.html">What is Diabetic Retinopathy?</a></h3>
-        
-        <p class="excerpt">FACT Check: There are approximately 70.2 million diabetic patients in India and as per reports this number might soar to around 90 Million by 2030, probably the reason why India is becoming the diabetic capital of the world.</p>
-        <div class="foot"><span>2 min read</span><a class="read-more" href="blog-post-page4.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      </div>
-    </article>
-  </div>
-  <div class="empty" id="emptyState">
-    <h3>No articles match your search</h3>
-    <p>Try a different word, or show every article again.</p>
-    <button class="btn btn-primary btn-sm" type="button" id="resetFilters">Show all articles</button>
-  </div>
+<p class="result-count" id="resultCount" aria-live="polite"></p>
+<div class="blog-grid" id="blogGrid">
+
+<article class="post-card is-featured" data-cat="Eye Care Tips" data-text="how to take care of your eyes daily? use uv-protected sunglasses uv-rays from the sun can have significant dangerous effects on our eyes over prolonged exposure. uv rays can affect our central vision, damaging the macula, which is main visual part of the retina in the back of the eye. eye care tips">
+<a class="thumb" href="blog-post-page.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_1.jpg" alt="" loading="eager"></a>
+<div class="body">
+<span class="tag">Eye Care Tips</span>
+<h3><a href="blog-post-page.html">How to take care of your eyes daily?</a></h3>
+<p class="sub-title">Use UV-Protected Sunglasses</p>
+<p class="excerpt">UV-rays from the sun can have significant dangerous effects on our eyes over prolonged exposure. UV rays can affect our central vision, damaging the macula, which is main visual part of the retina in the back of the eye.</p>
+<div class="foot"><span>2 min read</span><a class="read-more" href="blog-post-page.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div>
+</article>
+
+<article class="post-card" data-cat="Cataract" data-text="facts about cataract and robotic cataract surgery what is cataract? a cataract is the clouding or opacification of the lens inside the eye that prevents clear and sharp vision, (just like fogging of your glasses or windscreen of the car due to moisture). cataract">
+<a class="thumb" href="blog-post-page2.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_2.jpg" alt="" loading="lazy"></a>
+<div class="body">
+<span class="tag">Cataract</span>
+<h3><a href="blog-post-page2.html">Facts about Cataract and Robotic Cataract Surgery</a></h3>
+<p class="sub-title">What is Cataract?</p>
+<p class="excerpt">A cataract is the clouding or Opacification of the lens inside the eye that prevents clear and sharp Vision, (just like fogging of your glasses or windscreen of the car due to moisture).</p>
+<div class="foot"><span>3 min read</span><a class="read-more" href="blog-post-page2.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div>
+</article>
+
+<article class="post-card" data-cat="Digital Eye Health" data-text="computer vision syndrome do you experience? headache, eye irritation, blurry vision, burning eyes, excessive tearing, eye fatigue, frequent blinking. you might be suffering from computer vision syndrome - a common problem with most of the computer users due to prolonged usage of computers. digital eye health">
+<a class="thumb" href="blog-post-page3.html" tabindex="-1" aria-hidden="true"><img src="assets/img/blog_3.jpg" alt="" loading="lazy"></a>
+<div class="body">
+<span class="tag">Digital Eye Health</span>
+<h3><a href="blog-post-page3.html">Computer Vision Syndrome</a></h3>
+<p class="sub-title">Do you Experience?</p>
+<p class="excerpt">Headache, eye irritation, blurry vision, burning eyes, excessive tearing, eye fatigue, frequent blinking. You might be suffering from Computer Vision Syndrome - a common problem with most of the computer users due to prolonged usage of computers.</p>
+<div class="foot"><span>1 min read</span><a class="read-more" href="blog-post-page3.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div>
+</article>
+
+<article class="post-card" data-cat="Retina &amp; Diabetes" data-text="what is diabetic retinopathy? fact check: there are approximately 70.2 million diabetic patients in india and as per reports this number might soar to around 90 million by 2030, probably the reason why india is becoming the diabetic capital of the world. retina &amp; diabetes">
+<a class="thumb" href="blog-post-page4.html" tabindex="-1" aria-hidden="true"><img src="assets/img/Diabetic%20Retinopathy.jpg" alt="" loading="lazy"></a>
+<div class="body">
+<span class="tag">Retina &amp; Diabetes</span>
+<h3><a href="blog-post-page4.html">What is Diabetic Retinopathy?</a></h3>
+<p class="excerpt">FACT Check: There are approximately 70.2 million diabetic patients in India and as per reports this number might soar to around 90 Million by 2030, probably the reason why India is becoming the diabetic capital of the world.</p>
+<div class="foot"><span>2 min read</span><a class="read-more" href="blog-post-page4.html">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+</div>
+</article>
+
+</div>
+
+<div class="empty" id="emptyState">
+<h3>No articles match your search</h3>
+<p>Try a different word, or show every article again.</p>
+<button class="btn btn-primary btn-sm" type="button" id="resetFilters">Show all articles</button>
+</div>
+
 </div></section>
 
 <section class="explore"><div class="wrap">
-  <h2>Explore our treatments</h2>
-  <div class="explore-links">
-    <a href="treatments.html#cataract">Cataract Surgery</a>
-    <a href="treatments.html#retina">Retina Treatment</a>
-    <a href="treatments.html#glaucoma">Glaucoma</a>
-    <a href="treatments.html#lasik">LASIK Surgery</a>
-    <a href="treatments.html#cvs">Computer Vision Syndrome</a>
-  </div>
+<h2>Explore our treatments</h2>
+<div class="explore-links">
+<a href="treatments.html#cataract">Cataract Surgery</a>
+<a href="treatments.html#retina">Retina Treatment</a>
+<a href="treatments.html#glaucoma">Glaucoma</a>
+<a href="treatments.html#lasik">LASIK Surgery</a>
+<a href="treatments.html#cvs">Computer Vision Syndrome</a>
+</div>
 </div></section>
 
 <section class="cta-band"><div class="wrap">
-  <div><h2>Bringing Clarity to Your Vision, Starting Today</h2><p>Clinical hours: Monday - Saturday, 10:00 AM - 7:30 PM.</p></div>
-  <div class="actions"><a href="#" data-book class="btn btn-accent">Book Appointment</a><a href="tel:9354409885" class="btn btn-ghost">Call 9354 409 885</a></div>
+<div><h2>Bringing Clarity to Your Vision, Starting Today</h2><p>Clinical hours: Monday - Saturday, 10:00 AM - 7:30 PM.</p></div>
+<div class="actions"><a href="#" data-book class="btn btn-accent">Book Appointment</a><a href="tel:9354409885" class="btn btn-ghost">Call 9354 409 885</a></div>
 </div></section>
+
 </main>
+
 <dialog class="book" id="bookDialog" aria-labelledby="bookTitle">
-  <form method="dialog" novalidate>
-    <h3 id="bookTitle">Book an Appointment</h3>
-    <p class="hint">Fill in your details and we'll get back to you shortly.</p>
-    <label>Your Name<input name="name" type="text" autocomplete="name" required></label>
-    <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
-    <label>Mobile Number<span class="phone-row"><span>+91</span><input name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="12" required></span></label>
-    <label>Treatment Needed<select name="treatment" required><option value="">Select</option><option>LASIK Surgery</option><option>ICL Surgery</option><option>Cataract Surgery</option><option>Retina Treatment</option><option>Cornea Services</option><option>Glaucoma</option><option>Dry Eye Treatment</option><option>Diabetic Retinopathy</option><option>Pediatric Ophthalmology</option><option>Other</option></select></label>
-    <label>Preferred Time<input name="time" type="text" placeholder="e.g. Tomorrow, 11 AM"></label>
-    <p class="error" role="alert"></p>
-    <div class="actions"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button type="submit" class="btn btn-primary">Make an Appointment</button></div>
-  </form>
+<form method="dialog" novalidate>
+<h3 id="bookTitle">Book an Appointment</h3>
+<p class="hint">Fill in your details and we'll get back to you shortly.</p>
+<label>Your Name<input name="name" type="text" autocomplete="name" required></label>
+<label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
+<label>Mobile Number<span class="phone-row"><span>+91</span><input name="mobile" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="12" required></span></label>
+<label>Treatment Needed<select name="treatment" required><option value="">Select</option><option>LASIK Surgery</option><option>ICL Surgery</option><option>Cataract Surgery</option><option>Retina Treatment</option><option>Cornea Services</option><option>Glaucoma</option><option>Dry Eye Treatment</option><option>Diabetic Retinopathy</option><option>Pediatric Ophthalmology</option><option>Other</option></select></label>
+<label>Preferred Time<input name="time" type="text" placeholder="e.g. Tomorrow, 11 AM"></label>
+<p class="error" role="alert"></p>
+<div class="actions"><button type="button" class="btn btn-ghost" data-close>Cancel</button><button type="submit" class="btn btn-primary">Make an Appointment</button></div>
+</form>
 </dialog>
+
 <footer class="site-footer"><div class="wrap">
-  <div class="footer-grid">
-    <div><h4>Khanna Eye Centre</h4>
-      <p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p></div>
-    <div><h4>Quick Links</h4><ul>
-      <li><a href="index.html">Home</a></li><li><a href="treatments.html">Eye Treatments</a></li>
-      <li><a href="blogs.html">Blogs</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div><h4>Popular Searches</h4><ul>
-      <li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li><li><a href="treatments.html#cataract">Cataract</a></li>
-      <li><a href="treatments.html#glaucoma">Glaucoma</a></li><li><a href="treatments.html#retina">Retina Treatment</a></li>
-      <li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</span>
-    <nav aria-label="Legal"><a href="terms-and-conditions.html">Terms &amp; Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></nav>
-  </div>
+<div class="footer-grid">
+<div><h4>Khanna Eye Centre</h4>
+<p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p></div>
+<div><h4>Quick Links</h4><ul>
+<li><a href="index.html">Home</a></li><li><a href="treatments.html">Eye Treatments</a></li>
+<li><a href="blogs.html">Blogs</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+<div><h4>Popular Searches</h4><ul>
+<li><a href="treatments.html#lasik">Lasik Eye Surgery</a></li><li><a href="treatments.html#cataract">Cataract</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li><li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li></ul></div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</span>
+<nav aria-label="Legal"><a href="terms-and-conditions.html">Terms &amp; Conditions</a> | <a href="privacy-policy.html">Privacy Policy</a> | <a href="disclaimer.html">Disclaimer</a></nav>
+</div>
 </div></footer>
+
 <a class="wa-float" href="https://wa.me/919354409885" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.500 5.900 1.500C23 28.500 28.600 22.900 28.600 16S23 3 16 3zm0 23.300c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.200 9.900 10 5.200 16 5.200S26.800 9.900 26.800 15.600 22 26.300 16 26.300zm5.900-7.700c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3 2 3.100 4.900 4.300c1.800.8 2.500.8 3.400.7.500-.1 1.700-.7 1.900-1.400s.2-1.300.2-1.400c-.1-.2-.3-.3-.6-.4z"/></svg>
+<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.8 1.500 5.900 1.500C23 28.500 28.600 22.900 28.600 16S23 3 16 3zm0 23.300c-1.900 0-3.700-.5-5.300-1.500l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10.200 10.200 0 0 1-1.600-5.500C5.200 9.900 10 5.200 16 5.200S26.800 9.900 26.800 15.600 22 26.300 16 26.300zm5.900-7.700c-.3-.2-1.900-.9-2.200-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.700 8.700 0 0 1-4.300-3.800c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3 2 3.100 4.900 4.300c1.800.8 2.500.8 3.400.7.500-.1 1.700-.7 1.900-1.400s.2-1.300.2-1.400c-.1-.2-.3-.3-.6-.4z"/></svg>
 </a>
+
 <script src="main.js" defer></script>
 </body>
 </html>
