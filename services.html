@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Eye Treatments in Delhi – Khanna Eye Centre</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<style>
+/* Only new components; everything else comes from style.css */
+.svc-hero{padding:72px 0 56px;text-align:center}
+.svc-hero .container{max-width:900px}
+.svc-hero h1{margin-bottom:18px}
+.svc-hero p{margin-bottom:16px}
+
+
+/* ==========================================
+   PREMIUM TREATMENT CARDS - SERVICES PAGE
+   Add this below your existing CSS
+   ========================================== */
+
+/* Category Section */
+.svc-category{
+    margin:48px 0 56px;
+    padding:32px;
+    background:linear-gradient(180deg,#f8fcff 0%,#eef6fc 100%);
+    border:1px solid #dbeaf5;
+    border-radius:24px;
+    position:relative;
+}
+
+.svc-category::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(90deg,#2e7d32,#5cb85c);
+    border-radius:24px 24px 0 0;
+}
+
+.svc-category h3{
+    margin:0 0 24px;
+    padding:0;
+    border:none;
+    color:#17344d;
+    font-size:1.6rem;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.svc-category h3::before{
+    content:"";
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#2e7d32;
+    box-shadow:0 0 0 6px rgba(46,125,50,.12);
+}
+
+/* Grid */
+.treatments-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:24px;
+}
+
+/* Card */
+.treatment-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid #e5edf3;
+    box-shadow:0 8px 24px rgba(23,52,77,.08);
+    transition:all .35s ease;
+    display:flex;
+    flex-direction:column;
+}
+
+.treatment-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 42px rgba(23,52,77,.16);
+    border-color:#c7dfef;
+}
+
+/* Image */
+.treatment-img{
+    height:190px;
+    overflow:hidden;
+    position:relative;
+}
+
+.treatment-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.treatment-img::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+        rgba(23,52,77,.18),
+        rgba(23,52,77,0));
+}
+
+.treatment-card:hover .treatment-img img{
+    transform:scale(1.08);
+}
+
+/* Text */
+.treatment-name{
+    margin:20px 20px 10px;
+    font-size:1.18rem;
+    font-weight:700;
+    color:#17344d;
+    line-height:1.35;
+}
+
+.treatment-desc{
+    margin:0 20px;
+    color:#5d6975;
+    line-height:1.7;
+    flex:1;
+}
+
+/* Button */
+.treatment-card .btn{
+    margin:18px 20px 22px;
+    align-self:flex-start;
+}
+
+.btn-outline-sm{
+    border:1.5px solid #2e7d32;
+    color:#2e7d32;
+    background:#fff;
+    border-radius:30px;
+    padding:10px 18px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-outline-sm:hover{
+    background:#2e7d32;
+    color:#fff;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .svc-category{
+        padding:22px;
+        border-radius:18px;
+    }
+
+    .svc-category h3{
+        font-size:1.3rem;
+    }
+
+    .treatment-img{
+        height:170px;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+<span><i class="far fa-clock"></i> Mon - Sun &nbsp; 8:00 AM - 8:00 PM</span>
+<div class="topbar-right"><a href="tel:9354409885"><i class="fas fa-phone"></i> 9354 409 885</a></div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+<div class="container header-inner">
+<a href="index.html" class="logo"><div class="logo-img-wrap"><img src="assets/img/logo.jpg" alt="Khanna Eye Centre Logo"></div></a>
+<nav class="nav" id="nav">
+<ul id="navMenu">
+<li><a href="index.html">Home</a></li>
+<li class="has-dropdown">
+<a href="services.html" class="dropdown-toggle active" aria-current="page">Eye Treatments <i class="fas fa-chevron-down"></i></a>
+<ul class="dropdown">
+<li><a href="lasik.html">LASIK Surgery</a></li>
+<li><a href="icl.html">ICL Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract Surgery</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cornea">Cornea Services</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="services.html">View All Treatments</a></li>
+</ul>
+</li>
+<li><a href="doctors.html">Our Doctors</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="testimonials.html">Testimonials</a></li>
+<li><a href="contact.html">Contact Us</a></li>
+<li><a href="emplanelments.html">Emplanelments</a></li>
+</ul>
+</nav>
+<a href="#" class="btn btn-primary header-cta open-modal">Book Appointment</a>
+<button class="hamburger" id="hamburger" aria-label="Open Menu"><span></span><span></span><span></span></button>
+</div>
+</header>
+
+<!-- INTRO -->
+<section class="svc-hero section">
+<div class="container">
+<h1>Comprehensive Eye Treatment in Delhi For Every Stage of Vision</h1>
+<p>At Khanna Eye Centre, we provide comprehensive eye treatment in Delhi, covering diagnosis, treatment, surgery, and long-term management of a wide range of eye conditions. Our services are designed to address different vision needs, from refractive errors and cataracts to conditions affecting the cornea, retina, glaucoma, and more.</p>
+<p>With experienced ophthalmologists and advanced diagnostic and surgical techniques, we focus on providing personalised care based on each patient's condition, visual needs, and overall eye health.</p>
+<a href="#" class="btn btn-primary open-modal">Book an Appointment</a>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section class="treatments-section section">
+<div class="container">
+<div class="section-header">
+<h2>Our Eye Care Services</h2>
+<p>Explore our specialised services designed to help you understand, manage, and treat a wide range of eye conditions.</p>
+</div>
+<div class="svc-category">
+<h3>Refractive &amp; Vision Correction</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="lasik">
+<div class="img-container treatment-img"><img src="assets/img/see_without_glass.jpg" alt="LASIK Surgery" /></div>
+<p class="treatment-name">LASIK Surgery</p>
+<p class="treatment-desc">Reduce your dependence on glasses or contact lenses with laser vision correction tailored to your eye's requirements.</p>
+<a href="lasik.html" class="btn btn-outline-sm">Learn More</a>
+</div>
+<div class="treatment-card" id="icl">
+<div class="img-container treatment-img"><img src="assets/img/icl1.jpg" alt="ICL Surgery" /></div>
+<p class="treatment-name">ICL Surgery</p>
+<p class="treatment-desc">Implantable Collamer Lens (ICL) surgery offers an alternative for suitable patients who may not be candidates for LASIK.</p>
+<a href="icl.html" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Cataract &amp; Lens Surgery</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="cataract">
+<div class="img-container treatment-img"><img src="assets/img/cataract.jpg" alt="Cataract Surgery" /></div>
+<p class="treatment-name">Cataract Surgery</p>
+<p class="treatment-desc">Treatment for cataracts involves removing the cloudy natural lens and replacing it with an artificial intraocular lens to restore clearer vision.</p>
+<a href="treatments.html#cataract" class="btn btn-outline-sm">Learn More</a>
+</div>
+<div class="treatment-card" id="iol">
+<div class="img-container treatment-img"><img src="assets/img/iol.jpg" alt="IOL Surgery" /></div>
+<p class="treatment-name">IOL Surgery</p>
+<p class="treatment-desc">Intraocular lenses (IOLs) can be used to replace the eye's natural lens and help restore vision following lens-related conditions or surgery.</p>
+<a href="treatments.html#iol" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Cornea Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="cornea">
+<div class="img-container treatment-img"><img src="assets/img/icl3.jpg" alt="Cornea Services" /></div>
+<p class="treatment-name">Cornea Services</p>
+<p class="treatment-desc">Comprehensive care for conditions affecting the cornea, including diagnosis, medical management, and appropriate surgical treatment.</p>
+<a href="treatments.html#cornea" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Retina &amp; Diabetic Eye Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="retina">
+<div class="img-container treatment-img"><img src="assets/img/retina_treatment.jpg" alt="Retina Treatment" /></div>
+<p class="treatment-name">Retina Treatment</p>
+<p class="treatment-desc">Diagnosis and treatment of conditions affecting the retina, with appropriate management based on the underlying condition.</p>
+<a href="treatments.html#retina" class="btn btn-outline-sm">Learn More</a>
+</div>
+<div class="treatment-card" id="diabetic-retinopathy">
+<div class="img-container treatment-img"><img src="assets/img/Diabetic Retinopathy.jpg" alt="Diabetic Retinopathy Treatment" /></div>
+<p class="treatment-name">Diabetic Retinopathy Treatment</p>
+<p class="treatment-desc">Specialised care for diabetic retinopathy, helping detect and manage retinal changes associated with diabetes.</p>
+<a href="treatments.html#diabetic-retinopathy" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Glaucoma Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="glaucoma">
+<div class="img-container treatment-img"><img src="assets/img/Glaucoma.jpg" alt="Glaucoma Treatment" /></div>
+<p class="treatment-name">Glaucoma Treatment</p>
+<p class="treatment-desc">Diagnosis, monitoring, and treatment of glaucoma with the aim of managing eye pressure and protecting the optic nerve.</p>
+<a href="treatments.html#glaucoma" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Children's Eye Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="pediatric">
+<div class="img-container treatment-img"><img src="assets/img/Pediatric Eye Care.jpg" alt="Paediatric Ophthalmology &amp; Squint" /></div>
+<p class="treatment-name">Paediatric Ophthalmology &amp; Squint</p>
+<p class="treatment-desc">Eye care for children, including assessment and treatment of squint and other conditions affecting children's vision and eye alignment.</p>
+<a href="treatments.html#pediatric" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Oculoplasty &amp; Eye Aesthetics</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="oculoplasty">
+<div class="img-container treatment-img"><img src="assets/img/Oculoplasty Services.jpg" alt="Oculoplasty Services" /></div>
+<p class="treatment-name">Oculoplasty Services</p>
+<p class="treatment-desc">Medical and surgical care for conditions affecting the eyelids, tear ducts, orbit, and surrounding structures of the eye.</p>
+<a href="treatments.html#oculoplasty" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Neuro-Ophthalmology</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="neuro">
+<div class="img-container treatment-img"><img src="assets/img/Neuro Ophthamology Servies.jpg" alt="Neuro-Ophthalmology Services" /></div>
+<p class="treatment-name">Neuro-Ophthalmology Services</p>
+<p class="treatment-desc">Specialised evaluation of vision and eye-related problems associated with the optic nerve and the connection between the eyes and brain.</p>
+<a href="treatments.html#neuro" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Uvea Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="uvea">
+<div class="img-container treatment-img"><img src="assets/img/Uvea Services.jpg" alt="Uvea Services" /></div>
+<p class="treatment-name">Uvea Services</p>
+<p class="treatment-desc">Diagnosis and management of conditions affecting the uvea, the middle layer of the eye, including inflammatory and related eye disorders.</p>
+<a href="treatments.html#uvea" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+<div class="svc-category">
+<h3>Digital Eye Care</h3>
+<div class="treatments-grid">
+<div class="treatment-card" id="cvs">
+<div class="img-container treatment-img"><img src="assets/img/Computer Vision Syndrome Treatment.jpg" alt="Computer Vision Syndrome Treatment" /></div>
+<p class="treatment-name">Computer Vision Syndrome Treatment</p>
+<p class="treatment-desc">Assessment and management of symptoms associated with prolonged digital screen use, including eye strain, dryness, and visual discomfort.</p>
+<a href="treatments.html#cvs" class="btn btn-outline-sm">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="doctors-section section">
+<div class="container">
+<div class="section-header"><h2>Why Choose Khanna Eye Centre?</h2></div>
+<div class="why-grid">
+<div class="why-card"><h4>Experienced Eye Care</h4><p>Our ophthalmology team brings extensive clinical experience across different areas of eye care and surgery.</p></div>
+<div class="why-card"><h4>Comprehensive Services</h4><p>From vision correction and cataract surgery to cornea, retina, glaucoma, and specialised eye care, our services cover a wide range of ophthalmic needs.</p></div>
+<div class="why-card"><h4>Advanced Eye Care</h4><p>We use modern diagnostic and surgical techniques to support accurate assessment and appropriate treatment.</p></div>
+<div class="why-card"><h4>Personalised Approach</h4><p>Every patient's eyes and visual needs are different. We focus on understanding your condition before recommending the appropriate course of treatment.</p></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="svc-cta section">
+<div class="container">
+<h2>Find the Right Eye Care for You</h2>
+<p>Not sure which service is right for your eye condition? Speak with our team for an evaluation and personalised guidance based on your vision and eye health.</p>
+<div class="svc-cta-btns">
+<a href="#" class="btn btn-primary open-modal">Book an Appointment</a>
+<a href="contact.html" class="btn btn-outline">Contact Us</a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section section">
+<div class="container">
+<div class="section-header"><h2>Frequently Asked Questions</h2></div>
+<div class="faq-list">
+<details class="faq-item">
+<summary class="faq-question">How can I book an appointment for eye treatment at Khanna Eye Center Nirmaan Vihar?</summary>
+<div class="faq-answer"><p>You can book an appointment at Khanna Eye Centre, Nirmaan Vihar, by contacting the centre directly through phone or the appointment form on the website. During your consultation, an ophthalmologist will assess your eye condition, discuss suitable treatment options, and guide you through the next steps based on your individual needs.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">What is Eye Treatment?</summary>
+<div class="faq-answer"><p>Eye treatment includes medical, surgical, or laser-based procedures used to diagnose, manage, or correct different eye conditions. Depending on the problem, treatment may include medicines, glasses, laser procedures, or surgery. Common treatments include cataract surgery, LASIK, ICL, glaucoma treatment, and care for retinal and corneal conditions.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">How is Eye Surgery Done?</summary>
+<div class="faq-answer"><p>Eye surgery varies depending on the condition and procedure being performed. Most procedures begin with a detailed eye examination and are performed using specialised instruments, medication, laser technology, or surgical techniques. Your ophthalmologist will explain the procedure, preparation, anaesthesia, expected outcomes, and post-operative care before surgery.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">How much does eye treatment or surgery cost in Delhi NCR, India?</summary>
+<div class="faq-answer"><p>The cost of eye treatment or surgery in Delhi NCR varies depending on the condition, procedure, technology used, type of lens or implant, and individual treatment requirements. A consultation and detailed evaluation are generally needed to determine the appropriate procedure and provide an accurate estimate of the treatment cost.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">What are the eye treatment complications and risks associated with it?</summary>
+<div class="faq-answer"><p>Potential complications depend on the specific eye condition and treatment. Some procedures may involve temporary discomfort, dryness, inflammation, infection, changes in vision, or other risks. Your ophthalmologist will explain the potential complications and individual risk factors before treatment, along with the steps taken to minimise associated risks.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">What precautions should patients take after eye surgery?</summary>
+<div class="faq-answer"><p>After eye surgery, patients should follow their ophthalmologist's instructions carefully. This may include using prescribed eye drops, avoiding rubbing or touching the eyes, protecting the eyes from dust and water, and attending follow-up appointments. Avoid strenuous activities or swimming until your doctor confirms that they are safe.</p></div>
+</details>
+<details class="faq-item">
+<summary class="faq-question">What is the recovery time after eye surgery treatment?</summary>
+<div class="faq-answer"><p>Recovery time varies according to the type of eye surgery, your overall eye health, and the individual healing process. Some procedures allow patients to resume routine activities within a few days, while others require longer recovery. Your ophthalmologist will provide specific recovery instructions and tell you when normal activities can resume.</p></div>
+</details>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-grid">
+<div class="footer-brand">
+<div class="footer-logo"><h2>Khanna Eye Centre</h2></div>
+<p>Khanna Eye Centre has two high tech, fully equipped centres in Delhi. It is providing best and latest international standard services at affordable price to its patients &amp; attaining new heights.</p>
+<div class="social-links">
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+<a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+<a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Eye Treatments</a></li>
+<li><a href="blogs.html">Blogs</a></li>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-searches">
+<h4>Popular Searches</h4>
+<ul>
+<li><a href="lasik.html">Lasik Eye Surgery</a></li>
+<li><a href="treatments.html#cataract">Cataract</a></li>
+<li><a href="treatments.html#glaucoma">Glaucoma</a></li>
+<li><a href="treatments.html#retina">Retina Treatment</a></li>
+<li><a href="treatments.html#cvs">Computer Vision Syndrome Treatment</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="container footer-bottom-inner">
+<p>© 2026 Khanna Eye Center. All Rights Reserved. Design By Scinan Media</p>
+<div class="footer-bottom-links">
+<a href="terms-and-conditions.html">Terms &amp; Conditions</a><span>|</span>
+<a href="privacy-policy.html">Privacy Policy</a><span>|</span>
+<a href="disclaimer.html">Disclaimer</a>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
