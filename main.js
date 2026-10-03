@@ -452,3 +452,91 @@ document.querySelectorAll('.tacc-header').forEach(function(header){
   }
 })();
 
+
+
+/* =========================================================
+   BOOK APPOINTMENT -> GOOGLE SHEET
+   Add this block to main.js (it is already loaded by every
+   page). If index.html currently has its own inline
+   "<script> document.querySelectorAll('.open-modal')..." block
+   near the bottom of the page, delete that inline block so the
+   modal isn't wired up twice.
+========================================================= */
+
+// Paste the Web app URL you get after deploying the Apps Script.
+var APPOINTMENT_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzSSQok7PfwERmZd7PX3NbokmMdj3QL4S8VNG-bHfvu4yiu8BajP7Bl6oikS9Z4PfC7xw/exec';
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  // Open the modal from any "Book Appointment" / "open-modal" button.
+  document.querySelectorAll('.open-modal').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var overlay = document.getElementById('modalOverlay');
+      if (overlay) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  var modalForm = document.getElementById('modalForm');
+  if (!modalForm) return; // this page has no modal on it
+
+  modalForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    var submitBtn = document.getElementById('modalSubmitBtn');
+    var status = document.getElementById('modalStatus');
+
+    var data = new URLSearchParams();
+    data.append('name', document.getElementById('modalName').value);
+    data.append('email', document.getElementById('modalEmail').value);
+    data.append('phone', document.getElementById('modalPhone').value);
+    data.append('treatment', document.getElementById('modalTreatment').value);
+    data.append('preferredTime', document.getElementById('modalTime').value);
+    data.append('page', document.title || window.location.pathname);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(APPOINTMENT_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',   // Apps Script web apps don't return readable CORS
+      body: data         // responses to cross-origin fetches; see note below.
+    })
+      .then(function () {
+        status.style.display = 'block';
+        status.style.color = '#1a7f37';
+        status.textContent = "Thank you! We'll contact you shortly.";
+        modalForm.reset();
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Make an Appointment';
+        setTimeout(function () {
+          document.getElementById('modalOverlay').classList.remove('open');
+          document.body.style.overflow = '';
+          status.style.display = 'none';
+        }, 2500);
+      })
+      .catch(function () {
+        status.style.display = 'block';
+        status.style.color = '#c62828';
+        status.textContent = 'Something went wrong. Please call us instead.';
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Make an Appointment';
+      });
+  });
+});
+
+/*
+ NOTE on mode: 'no-cors'
+ Because the browser can't read the response from a different origin
+ (your site -> script.google.com) without the server sending CORS headers,
+ and Apps Script web apps don't let you set those for POST, the request is
+ sent "blind": the success message appears once the request is sent, not
+ once it's confirmed saved. Genuine failures (wrong URL, deployment set to
+ private, script error) will NOT show the red error message — they'll
+ silently fail. After deploying, submit a real test entry and check the
+ sheet to confirm it arrived, and check Apps Script's executions log
+ (left sidebar, the clock icon) if it doesn't show up.
+*/
