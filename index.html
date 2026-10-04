@@ -1022,25 +1022,25 @@
       <form class="modal-form" id="modalForm">
         <div class="modal-form-group">
           <label>Your Name</label>
-          <input type="text" placeholder="Enter your name" required />
+          <input type="text" id="modalName" name="name" placeholder="Enter your name" required />
         </div>
         <div class="modal-form-row">
           <div class="modal-form-group">
             <label>Email (optional)</label>
-            <input type="email" placeholder="Enter your email" />
+            <input type="email" id="modalEmail" name="email" placeholder="Enter your email" />
           </div>
           <div class="modal-form-group">
             <label>Mobile Number</label>
             <div class="modal-phone">
               <span>+91</span>
-              <input type="tel" placeholder="Enter mobile number" required />
+              <input type="tel" id="modalPhone" name="phone" placeholder="Enter mobile number" required />
             </div>
           </div>
         </div>
         <div class="modal-form-row">
           <div class="modal-form-group">
             <label>Treatment Needed</label>
-            <select>
+            <select id="modalTreatment" name="treatment">
               <option value="" disabled selected>Select</option>
               <option>LASIK Surgery</option>
               <option>ICL Surgery</option>
@@ -1056,10 +1056,11 @@
           </div>
           <div class="modal-form-group">
             <label>Preferred Time</label>
-            <input type="time" />
+            <input type="time" id="modalTime" name="preferredTime" />
           </div>
         </div>
-        <button type="submit" class="btn btn-primary btn-full">Make an Appointment</button>
+        <p id="modalStatus" style="display:none; font-size:14px; margin-top:10px;"></p>
+        <button type="submit" class="btn btn-primary btn-full" id="modalSubmitBtn">Make an Appointment</button>
       </form>
     </div>
   </div>
@@ -1090,17 +1091,6 @@
     })();
   </script>
 
-  <script>
-  document.querySelectorAll('.open-modal').forEach(function(btn) {
-    console.log('Found button:', btn);
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      console.log('Button clicked!');
-      document.getElementById('modalOverlay').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-</script>
 <!-- WHATSAPP FLOATING BUTTON -->
 <a href="https://wa.me/919354409885" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
   <i class="fab fa-whatsapp"></i>
