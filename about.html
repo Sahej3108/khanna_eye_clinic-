@@ -255,7 +255,7 @@
         <li><a href="blogs.html" aria-current="page">Blogs</a></li>
         
         <li><a href="about.html"class="active" aria-current="page">About Us</a></li>
-        <li><a href="testimonial.html">Testimonials</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="emplanelments.html">Emplanelments</a></li>
       </ul>
@@ -606,6 +606,57 @@
   <a href="https://wa.me/919354409885" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
+
+  <!-- APPOINTMENT MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this){this.classList.remove('open');document.body.style.overflow='';}">    <div class="modal-box">
+     <button class="modal-close" onclick="document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow='';" ><i class="fas fa-times"></i></button>
+      <h3>Book an Appointment</h3>
+      <p class="modal-sub">Fill in your details and we'll get back to you shortly.</p>
+      <form class="modal-form" id="modalForm">
+        <div class="modal-form-group">
+          <label>Your Name</label>
+          <input type="text" id="modalName" name="name" placeholder="Enter your name" required />
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>Email (optional)</label>
+            <input type="email" id="modalEmail" name="email" placeholder="Enter your email" />
+          </div>
+          <div class="modal-form-group">
+            <label>Mobile Number</label>
+            <div class="modal-phone">
+              <span>+91</span>
+              <input type="tel" id="modalPhone" name="phone" placeholder="Enter mobile number" required />
+            </div>
+          </div>
+        </div>
+        <div class="modal-form-row">
+          <div class="modal-form-group">
+            <label>Treatment Needed</label>
+            <select id="modalTreatment" name="treatment">
+              <option value="" disabled selected>Select</option>
+              <option>LASIK Surgery</option>
+              <option>ICL Surgery</option>
+              <option>Cataract Surgery</option>
+              <option>Retina Treatment</option>
+              <option>Cornea Services</option>
+              <option>Glaucoma</option>
+              <option>Dry Eye Treatment</option>
+              <option>Diabetic Retinopathy</option>
+              <option>Pediatric Ophthalmology</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="modal-form-group">
+            <label>Preferred Time</label>
+            <input type="time" id="modalTime" name="preferredTime" />
+          </div>
+        </div>
+        <p id="modalStatus" style="display:none; font-size:14px; margin-top:10px;"></p>
+        <button type="submit" class="btn btn-primary btn-full" id="modalSubmitBtn">Make an Appointment</button>
+      </form>
+    </div>
+  </div>
 
   <script src="main.js"></script>
   <script>
