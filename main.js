@@ -269,22 +269,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === 'Escape') closeModal();
     });
 
-    if (modalForm) {
-      modalForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        var btn = this.querySelector('button[type="submit"]');
-        btn.textContent = "Booked! We'll contact you soon.";
-        btn.style.background = '#1b5e20';
-        btn.disabled = true;
-        setTimeout(function() {
-          btn.textContent = 'Make an Appointment';
-          btn.style.background = '';
-          btn.disabled = false;
-          modalForm.reset();
-          closeModal();
-        }, 3000);
-      });
-    }
   }, 100);
 
   /* ---- TREATMENTS MOBILE ACCORDION CLICK LOGIC ---- */
